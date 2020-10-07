@@ -1,0 +1,209 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.row {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container,
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-fluid,
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-sm,
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-md,
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-lg,
+  .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-xl,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container-fluid,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container-sm,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container-md,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container-lg,
+  .navbar-vertical-sm:not([style*="display: none"]) ~ .main-content .container-xl {
+    padding-left: 0px !important;
+    padding-right: 0px !important; } }
+
+.sign-in {
+  font-family: "Axiforma" !important;
+  margin-top: 80px;
+  .auth {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .sign-in-button {
+      padding: 0px 40px;
+      button {
+        img {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+.nav-create {
+  color: $gray-500 !important;
+  &:hover {
+    color: $gray-700 !important;
+  }
+}
+
+.header-tabs {
+  background: $gray-100;
+  margin-bottom: 0;
+  outline: 1px solid $gray-200;
+}
+
+.header-talent-profile {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  outline: 1px solid $gray-200;
+}
+
+.dropup {
+  position: initial;
+}
+
+.content-panel {
+  height: calc(100vh - 81px);
+  overflow: scroll;
+}
+
+.inbox-notification-list {
+  padding: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.inbox-notification-item {
+  height: 75px;
+  background: $white;
+  border-bottom: 1px solid $gray-200;
+  border-radius: 0 !important;
+  padding: 1rem 1.25rem;
+  &:hover {
+    background: $gray-100;
+    .inbox-notification-item-timestamp {
+      display: none;
+      font-size: 11px;
+    }
+    .inbox-notification-item-button {
+      display: initial;
+    }
+  }
+}
+
+.inbox-notification-item-active {
+  background: $gray-100;
+}
+
+.inbox-notification-item-button {
+  display: none;
+}
+
+.talent-resume {
+  background: $white;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  input, p {
+    font-size: 14px;
+  }
+}
+
+.talent-resume-work-education {
+  li {
+      display: block;
+  }
+  li:before {
+      /*Using a Bootstrap glyphicon as the bullet point*/
+      content: "●";
+      // font-family: 'Glyphicons Halflings';
+      font-size: 9px;
+      float: left;
+      margin-top: 4px;
+      margin-left: -17px;
+      color: $blue;
+  }
+}
+
+.action-panel {
+  border-left: 1px solid $gray-200;
+}
+
+.action-panel-header {
+  padding: 1rem;
+  background: $white;
+  outline: 1px solid $gray-200;
+  h4 > i {
+    color: $blue;
+  }
+}
+
+.action-panel-body {
+  background: $gray-100;
+  border: none;
+  padding: 1.5rem;
+}
+
+.timeline-item {
+  margin-top: 1rem;
+  background: $white;
+  border: 1px solid $gray-200;
+  border-radius: 2px;
+}
+
+.timeline-item-header {
+  padding: 1rem;
+  margin-bottom: -1px;
+  border-bottom: 1px solid $gray-200;
+  border-radius: 2px;
+}
+
+.timeline-item-type {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  background: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.timeline-item-type > i {
+  font-size: 10px;
+  line-height: 10px;
+  color: $white;
+}
+
+.timeline-item-body {
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+.timeline-item-separator {
+  position: relative;
+  height: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  hr {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .badge {
+    z-index: 1;
+  }
+}

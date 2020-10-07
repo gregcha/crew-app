@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Dashkit"
+    })
+  </head>
+  <body class="d-flex align-items-start" style="background-image: url(assets/img/covers/crew-login.jpg); background-size: cover;">
+
+    <!-- CONTENT
+    ================================================== -->
+    <div class="container sign-in">
+
+      <!-- Brand -->
+      <div class="row justify-content-center">
+        <a class="navbar-brand" href="sign-in.html">
+          <img src="assets/img/logo-white.svg" class="navbar-brand-img
+          mx-auto" alt="..." style="width:100px">
+        </a>
+      </div>
+
+      <div class="row justify-content-center auth d-flex align-items-center justify-content-center">
+        <div class="col-12 col-md-5">
+
+          <!-- Heading -->
+          <h1 class="display-4 text-center text-white">
+            Welcome back!
+          </h1>
+
+          <!-- Subheading -->
+          <p class="text-muted text-center mb-5">
+            Please fasten your seatbelt, we're about to skyrocket.
+          </p>
+
+          <!-- Form -->
+          <form">
+
+            <!-- Google -->
+            <div class="sign-in-button">
+              <button class="btn btn-lg btn-block btn-white mb-3 rounded">
+                <a href="inbox.html" class="text-dark">
+                  <img src="assets/img/avatars/teams/team-logo-9.png">
+                  Sign in with Google
+                </a>
+              </button>
+            </div>
+
+            <!-- Link -->
+            <div class="text-center">
+              <small class="text-muted text-center">
+                Don't have an account yet? <a href="https://crewdotwork.typeform.com/to/XZUXrI" class="text-white" target="_blank">Request your access here</a>.
+              </small>
+            </div>
+
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

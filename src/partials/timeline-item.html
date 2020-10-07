@@ -1,0 +1,58 @@
+<div class="timeline-item @@if(scheduled == 'true'){timeline-item-scheduled}">
+  <div class="timeline-item-header d-flex align-items-center">
+
+    <!-- Avatar-->
+    <div style="position:relative">
+      <a href="profile-posts.html" class="avatar avatar-sm">
+        <img src="@@avatar-url" alt="..." class="avatar-img rounded-circle">
+      </a>
+      <div class="timeline-item-type">
+        <i class="fe fe-@@type"></i>
+      </div>
+    </div>
+
+
+    <div class="flex-grow-1 pl-3 mr-5">
+
+      <!-- Author -->
+      <p class="small text-muted mb-0">
+        <a class="d-block text-reset" href="#">@@author</a>
+      </p>
+
+      <!-- Title -->
+      <h4 class="mb-1">
+        <a href="profile-posts.html">@@title</a>
+      </h4>
+
+    </div>
+
+    <!-- Right elements -->
+    <div class="text-right">
+
+        <!-- Timestamp -->
+        <p class="small @@if(scheduled!='true'){text-muted} @@if(scheduled =='true'){badge badge-soft-success} mb-1">
+          @@timestamp
+        </p>
+
+        <!-- Action -->
+        <p class="small mb-0 @@if(scheduled!='true'){d-none}">
+          <a href="#">Edit</a><span> | </span><a href="#">Delete</a>
+        </p>
+
+    </div>
+
+  </div>
+
+  <div class="timeline-item-body @@if(details==''){d-none}">
+    @@details
+    <span>
+      <a href="#" class="small">See more</a>
+    </span>
+  </div>
+
+</div>
+
+<div class="timeline-item-separator @@if(scheduled!='true'){d-none}">
+  <hr>
+  <span class="badge badge-light"><i class="fe fe-activity"></i> Activities</span>
+</div>

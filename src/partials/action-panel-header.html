@@ -1,0 +1,53 @@
+<div class="action-panel-header d-flex align-items-center">
+
+  <!-- Avatar -->
+  <div>
+    <a href="#" class="avatar @@if(page!='inbox'){d-none}">
+      <img src="@@avatar-url" alt="..." class="avatar-img rounded-circle">
+    </a>
+  </div>
+
+  <div class="flex-grow-1 pl-3 mr-5">
+    <!-- Fullname -->
+    <h4 class="mb-1 @@if(page!='inbox'){d-none}">
+      <a href="@@webRoot/talent-profile.html">@@fullname </a><i class="fe fe-external-link"></i>
+    </h4>
+    <!-- Contact details -->
+    <p class="small text-muted mb-0">
+      <a class="d-block text-reset">@@contact_details</a>
+    </p>
+  </div>
+
+  <!-- Position selector -->
+  <div class="mr-2">
+    <select class="custom-select custom-select-sm" data-toggle="select">
+      <option>Backend Engineer</option>
+      <option>Frontend Developer</option>
+      <option>Product Manager</option>
+      <option>Marketing & Sales</option>
+    </select>
+  </div>
+
+  <!-- Stage selector -->
+  <div class="mr-1">
+    <select class="custom-select custom-select-sm" data-toggle="select">
+      <option>Sourced</option>
+      <option>Contacted</option>
+      <option>Applied</option>
+      <option>Interviewing</option>
+    </select>
+  </div>
+
+  <!-- More actions dropdown -->
+  <div>
+    <div class="dropdown">
+      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#!" class="dropdown-item">Action</a>
+        <a href="#!" class="dropdown-item">Another action</a>
+        <a href="#!" class="dropdown-item">Something else here</a>
+      </div>
+    </div>
+  </div>
+</div>
