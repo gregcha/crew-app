@@ -7,59 +7,17 @@
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
-
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
     "page": "inbox.html"
     })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "inbox.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "inbox.html"
-    })
-    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("partials/topbar.html")
-      }
-
-      <!-- HEADER TABS -->
-      @@include("partials/header-tabs.html", {
-        "menu1": "All notifications",
-        "url1" : "inbox.html",
-        "menu2": "Sent",
-        "url2" : "#",
-        "menu3": "Applications",
-        "url3" : "#",
-        "menu4": "Interviews",
-        "url4" : "#",
-        "menu5": "Reminders",
-        "url5" : "#",
-        "menu6": "Mentions",
-        "url6" : "#",
-        "menu7": "",
-        "url7" : "#"
+      @@include("partials/topbar.html", {
+        "category": "tabs"
       })
 
       <!-- INBOX -->
@@ -265,7 +223,6 @@
                   ])
 
                 </div>
-@
               </div>
             </div>
           </div>

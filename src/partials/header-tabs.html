@@ -1,49 +1,43 @@
-<div class="header-tabs sticky-top">
-  <div class="container-fluid">
-
-      <div class="row align-items-end">
-        <div class="col-12">
-          <ul class="nav nav-tabs nav-overflow p-0" style="border: none;">
-            <li class="nav-item">
-              <a href="@@url1" class="nav-link active">
-                @@menu1
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url2" class="nav-link">
-                <i class="fe fe-enveloppe"></i>
-                @@menu2
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url3" class="nav-link">
-                @@menu3
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url4" class="nav-link @@if(@@menu4 == ''){hidden)">
-                @@menu4
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url5" class="nav-link @@if(@@menu5 == ''){hidden)">
-                @@menu5
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url6" class="nav-link @@if(@@menu6 == ''){hidden)">
-                @@menu6
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="@@url7" class="nav-link @@if(@@menu7 == ''){hidden)">
-                @@menu7
-              </a>
-            </li>
-            @@include("header-user.html")
-          </ul>
-        </div>
-      </div> <!-- / .row -->
-
+<!-- Topbar: Tabs -->
+  <div class="row align-items-end">
+    <div class="col-12">
+      <ul class="nav nav-tabs nav-overflow p-0" style="border: none;">
+        <li class="nav-item">
+          <a href="@@url1" class="nav-link active">
+            @@menu1
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url2" class="nav-link">
+            <i class="fe fe-enveloppe"></i>
+            @@menu2
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url3" class="nav-link">
+            @@menu3
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url4" class="nav-link @@if(@@menu4 == ''){hidden)">
+            @@menu4
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url5" class="nav-link @@if(@@menu5 == ''){hidden)">
+            @@menu5
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url6" class="nav-link @@if(@@menu6 == ''){hidden)">
+            @@menu6
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="@@url7" class="nav-link @@if(@@menu7 == ''){hidden)">
+            @@menu7
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div> <!-- / .header -->

@@ -7,47 +7,17 @@
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
-
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
+      "page": "index.html"
     })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("partials/topbar.html")
-      }
-
-      <!-- HEADER TABS -->
-      @@include("partials/header-talent-profile.html", {
-        "origin" : "inbox",
-        "fullname" : "Pauline Lenoir",
+      @@include("partials/topbar.html", {
+        "category": "talent-profile"
       })
 
       <!-- Talent profile -->

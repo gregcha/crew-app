@@ -11482,6 +11482,15 @@ a:focus, button:focus {
     padding-left: 0px !important;
     padding-right: 0px !important; } }
 
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  padding-right: 0px;
+  padding-left: 0px; }
+
 .sign-in {
   font-family: "Axiforma" !important;
   margin-top: 80px; }
@@ -11499,23 +11508,13 @@ a:focus, button:focus {
       .sign-in .auth .sign-in-button button img {
         width: 24px; }
 
-.nav-create {
-  color: #B1C2D9 !important; }
-  .nav-create:hover {
-    color: #6E84A3 !important; }
+.topbar-crew {
+  padding: 0; }
+  .topbar-crew .nav-link {
+    padding: 1.3rem 0rem; }
 
-.header-tabs {
-  background: #F9FBFD;
-  margin-bottom: 0;
-  outline: 1px solid #EDF2F9; }
-
-.header-talent-profile {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  outline: 1px solid #EDF2F9; }
-
-.dropup {
-  position: initial; }
+.topbar-talent-profile {
+  padding: 0.8rem 0px; }
 
 .content-panel {
   height: calc(100vh - 81px);
