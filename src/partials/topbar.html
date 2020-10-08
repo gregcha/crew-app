@@ -1,7 +1,7 @@
-<nav class="navbar topbar-crew @@if(category == 'talent-profile'){topbar-talent-profile} navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
+<nav class="navbar topbar-crew @@if(section == 'talent'){topbar-talent-profile} navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
   <div class="container-fluid">
 
-    @@if (category == "tabs") {
+    @@if (section == "inbox") {
       @@include("header-tabs.html", {
         "url1" : "inbox.html",
         "menu1" : "All notifications",
@@ -20,10 +20,29 @@
       })
     }
 
-    @@if (category == "talent-profile") {
+    @@if (section == "talent") {
       @@include("header-talent-profile.html", {
         "origin" : "inbox",
         "fullname" : "Pauline Lenoir"
+      })
+    }
+
+    @@if (section == "tools") {
+      @@include("header-tabs.html", {
+        "url1" : "career-page-builder.html",
+        "menu1" : "Career page",
+        "url2" : "#",
+        "menu2" : "Email templates",
+        "url3" : "#",
+        "menu3" : "Sequences",
+        "url4" : "#",
+        "menu4" : "Scorecards",
+        "url5" : "#",
+        "menu5" : "Chrome Extension",
+        "url6" : "linkedin.html",
+        "menu6" : "[Linkedin] Chrome Extension",
+        "url7" : "#",
+        "menu7" : ""
       })
     }
 

@@ -11503,13 +11503,13 @@ a:focus, button:focus {
     .sign-in .auth h1 {
       font-size: 48px;
       margin-bottom: 10px; }
-    .sign-in .auth form {
+    .sign-in .auth .sign-in-form {
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .sign-in .auth form .sign-in-button {
+      .sign-in .auth .sign-in-form .sign-in-button {
         width: 50%; }
-        .sign-in .auth form .sign-in-button button img {
+        .sign-in .auth .sign-in-form .sign-in-button button img {
           width: 24px; }
 
 .topbar-crew {
@@ -11629,3 +11629,53 @@ a:focus, button:focus {
     width: 100%; }
   .timeline-item-separator .badge {
     z-index: 1; }
+
+.chrome-extension {
+  background-image: url(/assets/img/covers/linkedin-profile.png);
+  background-size: cover;
+  height: 100vh; }
+  .chrome-extension .modal-dialog-vertical {
+    max-width: 475px; }
+  .chrome-extension .chrome-extension-trigger {
+    text-align: center;
+    width: 650px;
+    padding: 11px;
+    background-color: #12263F; }
+  .chrome-extension .chrome-extension-modal {
+    border: none;
+    border-left: 1px solid #EDF2F9; }
+    .chrome-extension .chrome-extension-modal .chrome-extension-header {
+      justify-content: space-between;
+      display: flex;
+      position: absolute;
+      top: 0;
+      padding: 20px;
+      border-bottom: 1px solid #EDF2F9;
+      width: 100%;
+      background-color: #F9FBFD; }
+    .chrome-extension .chrome-extension-modal .chrome-extension-footer {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #EDF2F9;
+      background-color: #F9FBFD; }
+      .chrome-extension .chrome-extension-modal .chrome-extension-footer button {
+        width: 100%; }
+  .chrome-extension .chrome-extension-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; }
+    .chrome-extension .chrome-extension-body .chrome-extension-form {
+      width: 100%;
+      margin-top: 20px; }
+      .chrome-extension .chrome-extension-body .chrome-extension-form .form-row {
+        width: 100%; }
+        .chrome-extension .chrome-extension-body .chrome-extension-form .form-row .custom-select {
+          z-index: 1; }
+
+.chrome-extension-modal .sign-in-button button img {
+  width: 24px; }
