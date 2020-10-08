@@ -11679,7 +11679,7 @@ a:focus, button:focus {
     z-index: 1; }
 
 .chrome-extension {
-  background-image: url(/assets/img/covers/linkedin-profile.png);
+  background-image: url(../img/covers/linkedin-profile.png);
   background-size: cover;
   height: 100vh; }
   .chrome-extension .modal-dialog-vertical {
@@ -11688,7 +11688,7 @@ a:focus, button:focus {
     text-align: center;
     width: 650px;
     padding: 11px;
-    background-color: #12263F; }
+    background-color: #283e4a; }
   .chrome-extension .chrome-extension-modal {
     border: none;
     border-left: 1px solid #EDF2F9; }
@@ -11720,6 +11720,8 @@ a:focus, button:focus {
     .chrome-extension .chrome-extension-body .chrome-extension-form {
       width: 100%;
       margin-top: 20px; }
+      .chrome-extension .chrome-extension-body .chrome-extension-form label {
+        margin-bottom: 2px; }
       .chrome-extension .chrome-extension-body .chrome-extension-form .form-row {
         width: 100%; }
         .chrome-extension .chrome-extension-body .chrome-extension-form .form-row .custom-select {

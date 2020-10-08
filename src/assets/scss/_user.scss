@@ -209,7 +209,7 @@
 }
 
 .chrome-extension {
-  background-image: url(/assets/img/covers/linkedin-profile.png);
+  background-image: url(#{$path-to-img}/covers/linkedin-profile.png);
   background-size: cover;
   height: 100vh;
   .modal-dialog-vertical {
@@ -219,7 +219,7 @@
     text-align: center;
     width: 650px;
     padding: 11px;
-    background-color: $black;
+    background-color: #283e4a;
   }
   .chrome-extension-modal {
     border: none;
@@ -256,6 +256,9 @@
     .chrome-extension-form {
       width: 100%;
       margin-top: 20px;
+      label {
+        margin-bottom: 2px;
+      }
       .form-row {
         width: 100%;
         .custom-select {
