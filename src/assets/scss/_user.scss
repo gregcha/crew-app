@@ -41,11 +41,16 @@
       font-size: 48px;
       margin-bottom: 10px;
     }
-    .sign-in-button {
-      padding: 0px 40px;
-      button {
-        img {
-          width: 24px;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .sign-in-button {
+        width: 50%;
+        button {
+          img {
+            width: 24px;
+          }
         }
       }
     }
@@ -76,7 +81,7 @@
 }
 
 .inbox-notification-item {
-  height: 75px;
+  height: 81px;
   background: $white;
   border-bottom: 1px solid $gray-200;
   border-radius: 0 !important;
