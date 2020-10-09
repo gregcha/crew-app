@@ -1,0 +1,18 @@
+<div class="row d-flex align-items-center">
+
+  <!-- Back button -->
+  <button type="button" class="btn btn-light btn-sm ml-4 @@if(origin == ''){d-none} " >
+    <a href="@@origin-url"><i class="fe fe-chevron-left"></i> Back to @@origin</a>
+  </button>
+
+  <!-- Title -->
+  <div class="">
+    <h3 class="mb-0 mx-3">@@title</h3>
+  </div>
+
+  <!-- Action -->
+  <button class="btn btn-sm btn-link" data-toggle="modal" data-target="@@action-url">
+    @@action
+  </button>
+
+</div>

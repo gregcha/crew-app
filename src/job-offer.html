@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Crew - Pauline Lenoir"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "page": "job-offer.html"
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      @@include("partials/topbar.html", {
+        "section": "job-offer"
+      })
+
+      <!-- MODAL: Job offer edit -->
+      <div class="modal fade w-100" id="job-offer-edit" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="max-width: 900px;height: 92%;">
+          <div class="modal-content h-100" style="background:#F9FBFD; overflow:scroll;">
+            <div class="d-flex align-items-start justify-content-between p-4">
+
+              <div class="row w-100">
+                <div class="col-3 position-fixed">
+                  <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h2 class="mt-3 mb-4">Backend Engineer</h2>
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Job description</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Apply form</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Members</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Pipeline</a>
+                    <div class="custom-control custom-switch ml-2 mt-5">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                      <label class="custom-control-label" for="customSwitch1">Published</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-9 px-5 pt-3" style="margin-left: auto;">
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                      <div class="container">
+                        <div class="form-row mb-3 mx-0">
+                          <div class="col-12 col-md-6">
+                            <label class="small">Job title</label>
+                            <input type="text" class="form-control" placeholder="Job title" value="Backend Engineer">
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <label class="small">Department</label>
+                            <select class="custom-select" data-toggle="select">
+                              <option>Pick a department</option>
+                              <option>Marketing</option>
+                              <option>Finance</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row mb-3 mx-0">
+                          <div class="col-12 col-md-6">
+                            <label class="small">Contract type</label>
+                            <select class="custom-select" data-toggle="select">
+                              <option>Pick a type</option>
+                              <option>Marketing</option>
+                              <option>Finance</option>
+                            </select>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <label class="small">Location</label>
+                            <input type="text" class="form-control" placeholder="Location">
+                          </div>
+                        </div>
+                        <div class="form-row mb-3 mx-0 mb-4">
+                          <div class="col-12 col-md-6">
+                            <label class="small">Starting from</label>
+                            <input type="text" class="form-control" placeholder="Starting from" data-toggle="flatpickr">
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <label class="small">Salary</label>
+                            <input type="text" class="form-control" placeholder="Salary">
+                          </div>
+                        </div>
+                        <div data-toggle="quill" data-options='{"placeholder": "Enter the job description"}' style="height: 350px;"></div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <table class="table table-sm table-nowrap job-offer-apply-form-table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Apply form</th>
+                              <th scope="col">Required</th>
+                              <th scope="col">Optional</th>
+                              <th scope="col">Off</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @@loop("partials/job-offer-apply-form-table-item.html", [
+                              {"field":"First name"},
+                              {"field":"Last name"},
+                              {"field":"Email"},
+                              {"field":"Phone number"},
+                              {"field":"Headline"},
+                              {"field":"Cover letter"},
+                              {"field":"Contract type"},
+                              {"field":"Salary expectations"},
+                              {"field":"Skills"},
+                              {"field":"Upload Resume"},
+                              {"field":"Linkedin"},
+                              {"field":"Twitter"},
+                              {"field":"Github"},
+                              {"field":"Dribbble"},
+                              {"field":"Behance"},
+                              {"field":"Stackoverflow"},
+                              {"field":"Reddit"}
+                            ])
+                          </tbody>
+                        </table>
+
+                      </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

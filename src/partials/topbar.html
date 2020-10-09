@@ -1,4 +1,4 @@
-<nav class="navbar topbar-crew @@if(section == 'talent'){topbar-talent-profile} navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
+<nav class="navbar topbar-crew @@if(section == 'talent' || section == 'job-offer'){topbar-content} navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
   <div class="container-fluid">
 
     @@if (section == "inbox") {
@@ -21,9 +21,22 @@
     }
 
     @@if (section == "talent") {
-      @@include("header-talent-profile.html", {
+      @@include("header-content.html", {
+        "title" : "Pauline Lenoir",
         "origin" : "inbox",
-        "fullname" : "Pauline Lenoir"
+        "origin-url" : "inbox.html",
+        "action" : "edit profile",
+        "action-url" : "#"
+      })
+    }
+
+    @@if (section == "job-offer") {
+      @@include("header-content.html", {
+        "title" : "Backend Engineer",
+        "origin" : "",
+        "origin-url" : "",
+        "action" : "edit job offer",
+        "action-url" : "#job-offer-edit"
       })
     }
 
