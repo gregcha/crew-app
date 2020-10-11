@@ -7,6 +7,10 @@
   </head>
   <body>
 
+    <!-- MODALS
+    ================================================== -->
+    @@include("../partials/modal-profile.html")
+
     <!-- NAVIGATION
     ================================================== -->
     @@include("../partials/sidebar.html", {
@@ -30,13 +34,13 @@
 
           <!-- Resume -->
           <div class="col-12 col-xl-5 p-0">
-            @@include("../partials/talents/resume/pauline-lenoir.html")
+            @@include("../partials/resume_1.html")
           </div>
 
           <!-- Timelines -->
           <div class="col-12 col-xl-7 p-0">
             <div class="timeline-profile">
-              @@include("../partials/talents/timeline/pauline-lenoir.html", {
+              @@include("../partials/timeline_1.html", {
                 "section" : "profile"
               })
             </div>

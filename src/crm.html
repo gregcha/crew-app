@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-    "title": "Crew - Pauline Lenoir"
+      "title": "Crew - Pauline Lenoir"
     })
   </head>
   <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modal-profile.html")
 
     <!-- NAVIGATION
     ================================================== -->
@@ -16,6 +20,7 @@
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
+      @@include("partials/topbar-crm.html")
 
       <div class="card" data-list="{&quot;valueNames&quot;: [&quot;item-name&quot;, &quot;item-title&quot;, &quot;item-email&quot;, &quot;item-phone&quot;, &quot;item-score&quot;, &quot;item-company&quot;], &quot;page&quot;: 10, &quot;pagination&quot;: {&quot;paginationClass&quot;: &quot;list-pagination&quot;}}" id="contactsList">
                         <div class="card-header">

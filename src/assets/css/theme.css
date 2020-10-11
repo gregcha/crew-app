@@ -11458,6 +11458,12 @@ a:focus, button:focus {
 .row {
   margin: 0; }
 
+.btn-group-xs > .btn, .btn-xs {
+  font-size: 12px;
+  padding: 8px;
+  line-height: .5;
+  border-radius: .2rem; }
+
 @media (min-width: 768px) {
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container,
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-fluid,
@@ -11555,22 +11561,22 @@ a:focus, button:focus {
 .inbox-notification-item-button {
   display: none; }
 
-.talent-profile {
+.profile {
   height: calc(100vh - 140px);
   overflow: scroll;
   padding-bottom: 30px; }
 
-.talent-resume {
+.profile-resume {
   background: #FFFFFF; }
-  .talent-resume::-webkit-scrollbar {
+  .profile-resume::-webkit-scrollbar {
     display: none; }
-  .talent-resume input, .talent-resume p {
+  .profile-resume input, .profile-resume p {
     font-size: 14px; }
 
-.talent-resume-work-education li {
+.profile-resume-work-education li {
   display: block; }
 
-.talent-resume-work-education li:before {
+.profile-resume-work-education li:before {
   /*Using a Bootstrap glyphicon as the bullet point*/
   content: "●";
   font-size: 9px;
@@ -11636,6 +11642,22 @@ a:focus, button:focus {
   display: flex;
   align-items: center;
   width: 40px; }
+
+#profile-edit-form .dz-default {
+  padding: 2.7rem 1rem; }
+
+#profile-edit-form .work-education-item {
+  position: relative;
+  background: #EDF2F9;
+  border: 1px solid #E3EBF6;
+  border-radius: 2px;
+  padding: 20px; }
+
+#profile-edit-form a.anchor {
+  display: block;
+  position: relative;
+  top: -36px;
+  visibility: hidden; }
 
 .chrome-extension {
   background-image: url(../img/covers/linkedin-profile.png);

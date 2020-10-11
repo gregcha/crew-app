@@ -7,6 +7,13 @@
   margin: 0;
 }
 
+.btn-group-xs > .btn, .btn-xs {
+  font-size: 12px;
+  padding: 8px;
+  line-height: .5;
+  border-radius: .2rem;
+}
+
 @media (min-width: 768px) {
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container,
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-fluid,
@@ -113,13 +120,13 @@
   display: none;
 }
 
-.talent-profile {
+.profile {
   height: calc(100vh - 140px);
   overflow: scroll;
   padding-bottom: 30px;
 }
 
-.talent-resume {
+.profile-resume {
   background: $white;
   &::-webkit-scrollbar {
     display: none;
@@ -129,7 +136,7 @@
   }
 }
 
-.talent-resume-work-education {
+.profile-resume-work-education {
   li {
       display: block;
   }
@@ -217,6 +224,27 @@
   }
 }
 
+// Job offer modal
+#profile-edit-form {
+  .dz-default {
+    padding:2.7rem 1rem;
+  }
+  .work-education-item {
+    position: relative;
+    background: $gray-200;
+    border: 1px solid $gray-300;
+    border-radius: 2px;
+    padding: 20px;
+  }
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -36px;
+    visibility: hidden;
+  }
+}
+
+
 .chrome-extension {
   background-image: url(#{$path-to-img}/covers/linkedin-profile.png);
   background-size: cover;
@@ -288,9 +316,15 @@
   }
 }
 
+
+// Custome pipeline
 .button-drag {
   font-size: 16px;
   &:hover {
     cursor: grab !important;
   }
 }
+
+
+
+
