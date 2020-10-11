@@ -11512,16 +11512,23 @@ a:focus, button:focus {
         .sign-in .auth .sign-in-form .sign-in-button button img {
           width: 24px; }
 
-.topbar-crew {
+.topbar-tabs {
+  height: 70px;
   padding: 0; }
-  .topbar-crew .nav-link {
-    padding: 1.3rem 0rem; }
+  .topbar-tabs .nav-link {
+    padding: 20px 0px; }
 
-.topbar-content {
-  padding: 0.8rem 0px; }
+.topbar-profile {
+  height: 140px;
+  padding: 15px;
+  outline: 1px solid #EDF2F9; }
 
-.content-panel {
-  height: calc(100vh - 81px);
+.topbar-job-offer {
+  height: 70px;
+  padding: 0; }
+
+.inbox {
+  height: calc(100vh - 70px);
   overflow: scroll; }
 
 .inbox-notification-list {
@@ -11530,11 +11537,10 @@ a:focus, button:focus {
     display: none; }
 
 .inbox-notification-item {
-  height: 81px;
   background: #FFFFFF;
   border-bottom: 1px solid #EDF2F9;
   border-radius: 0 !important;
-  padding: 1rem 1.25rem; }
+  padding: 15px; }
   .inbox-notification-item:hover {
     background: #F9FBFD; }
     .inbox-notification-item:hover .inbox-notification-item-timestamp {
@@ -11548,6 +11554,11 @@ a:focus, button:focus {
 
 .inbox-notification-item-button {
   display: none; }
+
+.talent-profile {
+  height: calc(100vh - 140px);
+  overflow: scroll;
+  padding-bottom: 30px; }
 
 .talent-resume {
   background: #FFFFFF; }
@@ -11568,17 +11579,25 @@ a:focus, button:focus {
   margin-left: -17px;
   color: #2C7BE5; }
 
-.action-panel {
+.timeline-profile {
+  height: calc(100vh - 140px);
+  overflow: scroll;
   border-left: 1px solid #EDF2F9; }
 
-.action-panel-header {
-  padding: 1rem;
+.timeline-inbox {
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  border-left: 1px solid #EDF2F9; }
+
+.timeline-header {
+  height: 70px;
+  padding: 0px 15px;
   background: #FFFFFF;
   outline: 1px solid #EDF2F9; }
-  .action-panel-header h4 > i {
+  .timeline-header h4 > i {
     color: #2C7BE5; }
 
-.action-panel-body {
+.timeline-body {
   background: #F9FBFD;
   border: none;
   padding: 1.5rem; }
@@ -11594,23 +11613,6 @@ a:focus, button:focus {
   margin-bottom: -1px;
   border-bottom: 1px solid #EDF2F9;
   border-radius: 2px; }
-
-.timeline-item-type {
-  position: absolute;
-  right: -5px;
-  bottom: -5px;
-  background: #2C7BE5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; }
-
-.timeline-item-type > i {
-  font-size: 10px;
-  line-height: 10px;
-  color: #FFFFFF; }
 
 .timeline-item-body {
   padding: 1rem;
@@ -11686,3 +11688,9 @@ a:focus, button:focus {
 
 .chrome-extension-modal .sign-in-button button img {
   width: 24px; }
+
+.button-drag {
+  font-size: 16px; }
+  .button-drag:hover {
+    cursor: -webkit-grab !important;
+    cursor: grab !important; }

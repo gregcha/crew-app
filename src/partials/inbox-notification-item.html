@@ -1,4 +1,4 @@
-<div class="inbox-notification-item @@if(state == 'active'){inbox-notification-item-active} d-flex align-items-center">
+<div class="inbox-notification-item d-flex align-items-center">
 
     <!-- Checkbox -->
 <!--     <div class="col-1">
@@ -11,18 +11,18 @@
     <div class="flex-grow-1">
       <!-- Name -->
       <h4 class="mb-1">
-        <a href="profile-posts.html">@@fullname</a>
+        <a href="@@link">@@fullname</a>
       </h4>
 
       <!-- Title -->
-      <p class="small text-muted mb-0">
-        <a class="d-block text-reset" href="#"><i class="fe fe-@@type"></i> @@title</a>
+      <p class="small mb-0">
+        <i class="fe fe-@@icon text-primary"></i> @@title</a>
       </p>
     </div>
 
     <!-- Timestamp -->
     <div>
-      <p class="inbox-notification-item-timestamp text-muted mb-0" style="font-size: 10px;">
+      <p class="inbox-notification-item-timestamp text-muted mb-0" style="font-size: 12px;">
         <a class="d-block text-reset" href="#">@@timestamp</a>
       </p>
     </div>

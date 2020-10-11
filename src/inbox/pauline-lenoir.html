@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "title": "Crew - Inbox"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@include("../partials/sidebar.html", {
+      "section": "inbox"
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      @@include("../partials/topbar-tabs.html", {
+        "url1" : "inbox/pauline-lenoir.html",
+        "menu1": "All notifications",
+        "url2" : "#",
+        "menu2": "Sent",
+        "url3" : "#",
+        "menu3": "Applications",
+        "url4" : "#",
+        "menu4": "Interviews",
+        "url5" : "#",
+        "menu5": "Reminders",
+        "url6" : "#",
+        "menu6": "Mentions",
+        "url7" : "#",
+        "menu7": ""
+      })
+
+      <!-- INBOX -->
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Notification list -->
+          <div class="col-12 col-xl-5 p-0">
+            @@include("../partials/inbox-notification-list.html")
+          </div>
+
+          <!-- Talent timeline -->
+          <div class="col-12 col-xl-7 p-0">
+            <div class="timeline-inbox">
+
+              <!-- Header -->
+              @@include("../partials/timeline-header.html", {
+                "fullname"       : "Pauline Lenoir",
+                "headline"       : "Backend Expert at Spotify",
+                "contact_details": "pauline.lenoir@gmail.com | +33 6 83 74 40 20",
+                "avatar-url"     : "../assets/img/avatars/profiles/avatar-1.jpg",
+                "link"           : "../profiles/pauline-lenoir.html",
+                "section"        : "inbox"
+              })
+
+              @@include("../partials/talents/timeline/pauline-lenoir.html", {
+                "section" : "inbox",
+              })
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+</html>

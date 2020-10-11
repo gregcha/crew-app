@@ -1,0 +1,75 @@
+<div class="topbar-profile bg-white d-flex align-items-end justify-content-between sticky-top" style="z-index: 2">
+
+  <!-- Header -->
+  <div class="d-flex align-items-center px-3 my-auto" style="position:relative;">
+    <div>
+      <!-- Avatar -->
+      <a href="#" class="avatar avatar-xl">
+        <img src="../assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded">
+      </a>
+    </div>
+
+    <div class="ml-4">
+      <button type="button" class="btn btn-sm btn-white px-2 mb-2" style="position:absolute;left:0.75rem;top:96px;width:82px;">
+        <a href="@@origin-url" class="text-muted"><i class="fe fe-chevron-left"></i>@@origin</a>
+      </button>
+      <!-- Fullname -->
+      <h1 class="mb-1">
+        @@fullname
+        <span>
+          <button class="btn btn-link btn-sm" data-toggle="modal" data-target="@@edit-modal-id">
+            edit profile
+          </button>
+        </span>
+      </h1>
+
+      <!-- Headline -->
+      <p class="mb-1">
+        @@headline
+      </p>
+
+      <!-- Contact details -->
+      <p class="small text-muted mb-0">
+        @@contact_details
+      </p>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <div class="d-flex align-items-center" style="margin-bottom: 5px;">
+
+    <!-- Position selector -->
+    <div class="mr-2">
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Backend Engineer</option>
+        <option>Frontend Developer</option>
+        <option>Product Manager</option>
+        <option>Marketing & Sales</option>
+      </select>
+    </div>
+
+    <!-- Stage selector -->
+    <div class="mr-1">
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Contacted</option>
+        <option>Applied</option>
+        <option>Interviewing</option>
+      </select>
+    </div>
+
+    <!-- More actions dropdown -->
+    <div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="#!" class="dropdown-item">Action</a>
+          <a href="#!" class="dropdown-item">Another action</a>
+          <a href="#!" class="dropdown-item">Something else here</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

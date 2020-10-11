@@ -8,7 +8,7 @@
 
     <!-- Brand -->
     <a class="navbar-brand" href="#">
-      <img src="assets/img/logo-dark.svg" class="navbar-brand-img
+      <img src="../assets/img/logo-dark.svg" class="navbar-brand-img
       mx-auto" style="width:100px">
     </a>
 
@@ -43,22 +43,22 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link @@if(page =='inbox.html'){active}" href="inbox.html" >
+          <a class="nav-link @@if(section =='inbox'){active}" href="@@webRoot/inbox/pauline-lenoir.html" >
             <i class="fe fe-inbox"></i> Inbox
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(page =='talents.html'){active}" href="#">
+          <a class="nav-link @@if(section =='crm'){active}" href="@@webRoot/crm.html">
             <i class="fe fe-users"></i> Talents
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(page =='career-page-builder.html'){active}" href="career-page-builder.html">
+          <a class="nav-link @@if(section =='tools'){active}" href="@@webRoot/career-page-builder.html">
             <i class="fe fe-zap"></i> Tools
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(page =='settings.html'){active}" href="#">
+          <a class="nav-link @@if(section =='settings.html'){active}" href="#">
             <i class="fe fe-settings"></i> Settings
           </a>
         </li>
@@ -70,7 +70,7 @@
       <!-- Jobs -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link @@if(page =='job-offer.html'){active}" href="job-offer.html">
+          <a class="nav-link @@if(section =='job-offer'){active}" href="@@webRoot/job-offer.html">
             Backend Engineer
           </a>
         </li>

@@ -57,21 +57,27 @@
   }
 }
 
-
-
-.topbar-crew {
+.topbar-tabs {
+  height: 70px;
   padding: 0;
   .nav-link {
-    padding: 1.3rem 0rem;
+    padding: 20px 0px;
   }
 }
 
-.topbar-content {
-  padding: 0.8rem 0px;
+.topbar-profile {
+  height: 140px;
+  padding: 15px;
+  outline: 1px solid $gray-200;
 }
 
-.content-panel {
-  height: calc(100vh - 81px);
+.topbar-job-offer {
+  height: 70px;
+  padding: 0;
+}
+
+.inbox {
+  height: calc(100vh - 70px);
   overflow: scroll;
 }
 
@@ -83,11 +89,10 @@
 }
 
 .inbox-notification-item {
-  height: 81px;
   background: $white;
   border-bottom: 1px solid $gray-200;
   border-radius: 0 !important;
-  padding: 1rem 1.25rem;
+  padding: 15px;
   &:hover {
     background: $gray-100;
     .inbox-notification-item-timestamp {
@@ -106,6 +111,12 @@
 
 .inbox-notification-item-button {
   display: none;
+}
+
+.talent-profile {
+  height: calc(100vh - 140px);
+  overflow: scroll;
+  padding-bottom: 30px;
 }
 
 .talent-resume {
@@ -134,12 +145,21 @@
   }
 }
 
-.action-panel {
+.timeline-profile {
+  height: calc(100vh - 140px);
+  overflow: scroll;
   border-left: 1px solid $gray-200;
 }
 
-.action-panel-header {
-  padding: 1rem;
+.timeline-inbox {
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  border-left: 1px solid $gray-200;
+}
+
+.timeline-header {
+  height: 70px;
+  padding: 0px 15px;
   background: $white;
   outline: 1px solid $gray-200;
   h4 > i {
@@ -147,7 +167,7 @@
   }
 }
 
-.action-panel-body {
+.timeline-body {
   background: $gray-100;
   border: none;
   padding: 1.5rem;
@@ -165,25 +185,6 @@
   margin-bottom: -1px;
   border-bottom: 1px solid $gray-200;
   border-radius: 2px;
-}
-
-.timeline-item-type {
-  position: absolute;
-  right: -5px;
-  bottom: -5px;
-  background: $blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
-.timeline-item-type > i {
-  font-size: 10px;
-  line-height: 10px;
-  color: $white;
 }
 
 .timeline-item-body {
@@ -284,5 +285,12 @@
         width: 24px;
       }
     }
+  }
+}
+
+.button-drag {
+  font-size: 16px;
+  &:hover {
+    cursor: grab !important;
   }
 }

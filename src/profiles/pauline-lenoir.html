@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "title": "Crew - Pauline Lenoir"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@include("../partials/sidebar.html", {
+      "section": "profile"
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      @@include("../partials/topbar-profile.html", {
+        "fullname"       : "Pauline Lenoir",
+        "headline"       : "Backend Expert at Spotify",
+        "contact_details": "pauline.lenoir@gmail.com | +33 6 83 74 40 20",
+        "origin"         : "Inbox",
+        "origin-url"     : "../inbox/pauline-lenoir.html"
+      })
+
+      <!-- Talent profile -->
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Resume -->
+          <div class="col-12 col-xl-5 p-0">
+            @@include("../partials/talents/resume/pauline-lenoir.html")
+          </div>
+
+          <!-- Timelines -->
+          <div class="col-12 col-xl-7 p-0">
+            <div class="timeline-profile">
+              @@include("../partials/talents/timeline/pauline-lenoir.html", {
+                "section" : "profile"
+              })
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+</html>
