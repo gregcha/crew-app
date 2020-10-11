@@ -28,13 +28,13 @@
 
     <!-- CONTENT
     ================================================== -->
-    <div class="container sign-in">
+    <div class="container sign-in d-flex flex-column justify-content-between" style="height:90vh">
 
       <!-- Brand -->
       <div class="row justify-content-center">
         <a class="navbar-brand" href="sign-in.html">
           <img src="assets/img/logo-white.svg" class="navbar-brand-img
-          mx-auto" alt="..." style="width:100px">
+          mx-auto" style="width:100px">
         </a>
       </div>
 
@@ -52,7 +52,7 @@
           </p>
 
           <!-- Form -->
-          <form">
+          <form class="sign-in-form">
 
             <!-- Google -->
             <div class="sign-in-button">
@@ -75,6 +75,18 @@
 
         </div>
       </div> <!-- / .row -->
+
+      <div class="alert alert-dark d-flex align-items-center justify-content-between" role="alert">
+        <span>
+          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+          <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">More info</a>
+        </span>
+        <button type="button" class="list-alert-close close" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+
     </div> <!-- / .container -->
 
     <!-- JAVASCRIPT
@@ -93,6 +105,7 @@
     <script src="./assets/libs/quill/dist/quill.min.js"></script>
     <script src="./assets/libs/select2/dist/js/select2.full.min.js"></script>
     <script src="./assets/libs/chart.js/Chart.extension.js"></script>
+    <script src="https://kit.fontawesome.com/5a839d3cf9.js" crossorigin="anonymous"></script>
 
     <!-- Map -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>

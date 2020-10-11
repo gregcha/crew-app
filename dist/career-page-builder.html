@@ -21,14 +21,13 @@
     <link rel="stylesheet" href="./assets/css/theme.min.css">
       
     <!-- Title -->
-    <title>Crew - Demo homepage</title>
+    <title>Crew - Inbox</title>
 
   </head>
   <body>
 
     <!-- NAVIGATION
     ================================================== -->
-
     <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidebar">
       <div class="container-fluid">
 
@@ -84,7 +83,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./career-page-builder.html">
+              <a class="nav-link active" href="./career-page-builder.html">
                 <i class="fe fe-zap"></i> Tools
               </a>
             </li>
@@ -139,7 +138,59 @@
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
-    </div>
+      <nav class="navbar topbar-tabs navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
+        <div class="container-fluid h-100">
+
+          <!-- Topbar: Tabs -->
+          <div class="row align-items-end h-100">
+            <div class="col-12">
+              <ul class="nav nav-tabs nav-overflow p-0" style="border: none;">
+                <li class="nav-item">
+                  <a href="career-page-builder.html" class="nav-link active">
+                    Career page
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fe fe-enveloppe"></i>
+                    Email templates
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Sequences
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link @@if(Scorecards == ''){hidden)">
+                    Scorecards
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link @@if(Chrome Extension == ''){hidden)">
+                    Chrome Extension
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="linkedin.html" class="nav-link @@if([Linkedin] Chrome Extension == ''){hidden)">
+                    [Linkedin] Chrome Extension
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link @@if( == ''){hidden)">
+                    
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+
+
+    </div><!-- / .main-content -->
 
     <!-- JAVASCRIPT
     ================================================== -->
