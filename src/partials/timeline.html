@@ -1,0 +1,121 @@
+<div class="timeline-body">
+
+  <!-- Controls -->
+  <div class="timeline-controls d-flex justify-content-between">
+    <div>
+      <button class="btn btn-sm btn-white">
+        <span class="fe fe-mail text-primary"></span> Email
+      </button>
+
+      <button class="btn btn-sm btn-white">
+        <span class="fe fe-clock text-primary"></span> Reminder
+      </button>
+
+      <button class="btn btn-sm btn-white">
+        <span class="fe fe-file-text text-primary"></span> Note
+      </button>
+
+      <button class="btn btn-sm btn-white">
+        <span class="fe fe-more-horizontal"></span>
+      </button>
+    </div>
+    <div>
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>All activities</option>
+        <option>Emails</option>
+        <option>Applications</option>
+        <option>Interviews</option>
+        <option>Notes</option>
+        <option>Reviews</option>
+        <option>Signals</option>
+        <option>Reminders</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Scheduled items -->
+  @@if(timeline.A != "") {
+    @@include("timeline-item.html", {
+      "type"      : "@@timeline.A.type",
+      "scheduled" : "@@timeline.A.scheduled",
+      "icon"      : "@@timeline.A.icon",
+      "avatar_url": "@@timeline.A.avatar_url",
+      "author"    : "@@timeline.A.author",
+      "title"     : "@@timeline.A.title",
+      "timestamp" : "@@timeline.A.timestamp",
+      "details"   : "@@timeline.A.details"
+    })
+  }
+
+  <!-- Divider -->
+  <div class="timeline-item-separator">
+    <hr>
+    <span class="badge badge-light"><i class="fe fe-activity"></i> Activities</span>
+  </div>
+
+  <!-- Timeline items -->
+  <div class="timeline-items">
+    @@if(timeline.B != "") {
+      @@include("timeline-item.html", {
+        "type"      : "@@timeline.B.type",
+        "scheduled" : "@@timeline.B.scheduled",
+        "icon"      : "@@timeline.B.icon",
+        "avatar_url": "@@timeline.B.avatar_url",
+        "author"    : "@@timeline.B.author",
+        "title"     : "@@timeline.B.title",
+        "timestamp" : "@@timeline.B.timestamp",
+        "details"   : "@@timeline.B.details"
+      })
+    },
+    @@if(timeline.C != "") {
+      @@include("timeline-item.html", {
+        "type"      : "@@timeline.C.type",
+        "scheduled" : "@@timeline.C.scheduled",
+        "icon"      : "@@timeline.C.icon",
+        "avatar_url": "@@timeline.C.avatar_url",
+        "author"    : "@@timeline.C.author",
+        "title"     : "@@timeline.C.title",
+        "timestamp" : "@@timeline.C.timestamp",
+        "details"   : "@@timeline.C.details"
+      })
+    }
+    @@if(timeline.D != "") {
+      @@include("timeline-item.html", {
+        "type"      : "@@timeline.D.type",
+        "scheduled" : "@@timeline.D.scheduled",
+        "icon"      : "@@timeline.D.icon",
+        "avatar_url": "@@timeline.D.avatar_url",
+        "author"    : "@@timeline.D.author",
+        "title"     : "@@timeline.D.title",
+        "timestamp" : "@@timeline.D.timestamp",
+        "details"   : "@@timeline.D.details"
+      })
+    }
+    @@if(timeline.E != "") {
+      @@include("timeline-item.html", {
+        "type"      : "@@timeline.E.type",
+        "scheduled" : "@@timeline.E.scheduled",
+        "icon"      : "@@timeline.E.icon",
+        "avatar_url": "@@timeline.E.avatar_url",
+        "author"    : "@@timeline.E.author",
+        "title"     : "@@timeline.E.title",
+        "timestamp" : "@@timeline.E.timestamp",
+        "details"   : "@@timeline.E.details"
+      })
+    }
+    @@if(timeline.F != "") {
+      @@include("timeline-item.html", {
+        "type"      : "@@timeline.F.type",
+        "scheduled" : "@@timeline.F.scheduled",
+        "icon"      : "@@timeline.F.icon",
+        "avatar_url": "@@timeline.F.avatar_url",
+        "author"    : "@@timeline.F.author",
+        "title"     : "@@timeline.F.title",
+        "timestamp" : "@@timeline.F.timestamp",
+        "details"   : "@@timeline.F.details"
+      })
+    }
+
+  </div>
+
+</div>

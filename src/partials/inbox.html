@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("head.html", {
+      "title": "Crew - Inbox"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@include("sidebar.html", {
+      "section": "inbox"
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      @@include("topbar-tabs.html", {
+        "url1" : "inbox/inbox_1.html",
+        "menu1": "All notifications",
+        "url2" : "#",
+        "menu2": "Sent",
+        "url3" : "#",
+        "menu3": "Applications",
+        "url4" : "#",
+        "menu4": "Interviews",
+        "url5" : "#",
+        "menu5": "Reminders",
+        "url6" : "#",
+        "menu6": "Mentions",
+        "url7" : "#",
+        "menu7": ""
+      })
+
+      <!-- INBOX -->
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Notification list -->
+          <div class="col-12 col-xl-5 p-0">
+            @@include("inbox-notification-list.html", {
+              "notification" : {
+                "A" : {
+                  "full_name"                : "@@full_name.A",
+                  "icon"                     : "@@icon.A",
+                  "title"                    : "@@title.A",
+                  "link"                     : "@@webRoot/inbox/inbox_1.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "B" : {
+                  "full_name"                : "@@full_name.B",
+                  "icon"                     : "@@icon.B",
+                  "title"                    : "@@title.B",
+                  "link"                     : "@@webRoot/inbox/inbox_2.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "C" : {
+                  "full_name"                : "@@full_name.C",
+                  "icon"                     : "@@icon.C",
+                  "title"                    : "@@title.C",
+                  "link"                     : "@@webRoot/inbox/inbox_3.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "D" : {
+                  "full_name"                : "@@full_name.D",
+                  "icon"                     : "@@icon.D",
+                  "title"                    : "@@title.D",
+                  "link"                     : "@@webRoot/inbox/inbox_4.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "E" : {
+                  "full_name"                : "@@full_name.E",
+                  "icon"                     : "@@icon.E",
+                  "title"                    : "@@title.E",
+                  "link"                     : "@@webRoot/inbox/inbox_5.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "F" : {
+                  "full_name"                : "@@full_name.F",
+                  "icon"                     : "@@icon.F",
+                  "title"                    : "@@title.F",
+                  "link"                     : "@@webRoot/inbox/inbox_6.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "G" : {
+                  "full_name"                : "@@full_name.G",
+                  "icon"                     : "@@icon.G",
+                  "title"                    : "@@title.G",
+                  "link"                     : "@@webRoot/inbox/inbox_7.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "H" : {
+                  "full_name"                : "@@full_name.H",
+                  "icon"                     : "@@icon.H",
+                  "title"                    : "@@title.H",
+                  "link"                     : "@@webRoot/inbox/inbox_8.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "I" : {
+                  "full_name"                : "@@full_name.I",
+                  "icon"                     : "@@icon.I",
+                  "title"                    : "@@title.I",
+                  "link"                     : "@@webRoot/inbox/inbox_9.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "J" : {
+                  "full_name"                : "@@full_name.J",
+                  "icon"                     : "@@icon.J",
+                  "title"                    : "@@title.J",
+                  "link"                     : "@@webRoot/inbox/inbox_10.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "K" : {
+                  "full_name"                : "@@full_name.K",
+                  "icon"                     : "@@icon.K",
+                  "title"                    : "@@title.K",
+                  "link"                     : "@@webRoot/inbox/inbox_11.html",
+                  "timestamp"                : "15 hours ago",
+                },
+                "L" : {
+                  "full_name"                : "@@full_name.L",
+                  "icon"                     : "@@icon.L",
+                  "title"                    : "@@title.L",
+                  "link"                     : "@@webRoot/inbox/inbox_12.html",
+                  "timestamp"                : "15 hours ago",
+                }
+              }
+            })
+          </div>
+
+          <!-- Talent timeline -->
+          <div class="col-12 col-xl-7 p-0">
+            <div class="timeline-inbox">
+
+              <!-- Header -->
+              @@include("timeline-header.html", {
+                "section"     : "inbox",
+                "full_name"   : "@@full_name",
+                "headline"    : "@@headline",
+                "avatar_url"  : "@@avatar_url",
+                "link_profile": "@@link_profile"
+              })
+
+              @@include("timeline.html", {
+                "timeline"             : {
+                  "A"                  : {
+                    "type"             : "@@timeline.A.type",
+                    "scheduled"        : "@@timeline.A.scheduled",
+                    "icon"             : "@@timeline.A.icon",
+                    "avatar_url"       : "@@timeline.A.avatar_url",
+                    "author"           : "@@timeline.A.author",
+                    "title"            : "@@timeline.A.title",
+                    "timestamp"        : "@@timeline.A.timestamp",
+                    "details"          : "@@timeline.A.details"
+                  },
+                  "B"                  : {
+                    "type"             : "@@timeline.B.type",
+                    "scheduled"        : "@@timeline.B.scheduled",
+                    "icon"             : "@@timeline.B.icon",
+                    "avatar_url"       : "@@timeline.B.avatar_url",
+                    "author"           : "@@timeline.B.author",
+                    "title"            : "@@timeline.B.title",
+                    "timestamp"        : "@@timeline.B.timestamp",
+                    "details"          : "@@timeline.B.details"
+                  },
+                  "C"                  : {
+                    "type"             : "@@timeline.C.type",
+                    "scheduled"        : "@@timeline.C.scheduled",
+                    "icon"             : "@@timeline.C.icon",
+                    "avatar_url"       : "@@timeline.C.avatar_url",
+                    "author"           : "@@timeline.C.author",
+                    "title"            : "@@timeline.C.title",
+                    "timestamp"        : "@@timeline.C.timestamp",
+                    "details"          : "@@timeline.C.details"
+                  },
+                  "D"                  : {
+                    "type"             : "@@timeline.D.type",
+                    "scheduled"        : "@@timeline.D.scheduled",
+                    "icon"             : "@@timeline.D.icon",
+                    "avatar_url"       : "@@timeline.D.avatar_url",
+                    "author"           : "@@timeline.D.author",
+                    "title"            : "@@timeline.D.title",
+                    "timestamp"        : "@@timeline.D.timestamp",
+                    "details"          : "@@timeline.D.details"
+                  },
+                  "E"                  : {
+                    "type"             : "@@timeline.E.type",
+                    "scheduled"        : "@@timeline.E.scheduled",
+                    "icon"             : "@@timeline.E.icon",
+                    "avatar_url"       : "@@timeline.E.avatar_url",
+                    "author"           : "@@timeline.E.author",
+                    "title"            : "@@timeline.E.title",
+                    "timestamp"        : "@@timeline.E.timestamp",
+                    "details"          : "@@timeline.E.details"
+                  },
+                  "F"                  : {
+                    "type"             : "@@timeline.F.type",
+                    "scheduled"        : "@@timeline.F.scheduled",
+                    "icon"             : "@@timeline.F.icon",
+                    "avatar_url"       : "@@timeline.F.avatar_url",
+                    "author"           : "@@timeline.F.author",
+                    "title"            : "@@timeline.F.title",
+                    "timestamp"        : "@@timeline.F.timestamp",
+                    "details"          : "@@timeline.F.details"
+                  }
+                }
+              })
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("scripts.html")
+
+  </body>
+</html>

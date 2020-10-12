@@ -4,7 +4,7 @@
     <!-- Avatar-->
     <div style="position:relative">
       <a href="#" class="avatar avatar-sm">
-        <img src="@@avatar-url" alt="..." class="avatar-img rounded-circle">
+        <img src="@@avatar_url" alt="..." class="avatar-img rounded-circle">
       </a>
     </div>
 
@@ -29,13 +29,13 @@
         <div>
           <i class="fe fe-@@icon text-primary" style="font-size: 12px;"></i>
           <span class="small">@@type</span>
-          <span class="small mb-0 @@if(scheduled!='true'){d-none}">
+          <span class="small mb-0 @@if(scheduled == 'false'){d-none}">
             <a href="#">edit</a><span> | </span><a href="#">cancel</a>
           </span>
         </div>
 
         <!-- Timestamp -->
-        <p class="small @@if(scheduled!='true'){text-muted} @@if(scheduled =='true'){badge badge-soft-success} mb-1">
+        <p class="small @@if(scheduled == 'true'){badge badge-soft-success text-success} mb-1">
           @@timestamp
         </p>
 
@@ -44,7 +44,7 @@
 
   </div>
 
-  <div class="timeline-item-body @@if(details==''){d-none}">
+  <div class="timeline-item-body @@if(details == ''){d-none}">
     @@details
     <span>
       <a href="#" class="small">See more</a>

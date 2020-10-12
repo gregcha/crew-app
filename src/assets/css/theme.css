@@ -11659,6 +11659,9 @@ a:focus, button:focus {
   top: -36px;
   visibility: hidden; }
 
+#profile-edit-form .select2-selection--multiple {
+  padding: 10px; }
+
 .chrome-extension {
   background-image: url(../img/covers/linkedin-profile.png);
   background-size: cover;

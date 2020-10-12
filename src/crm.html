@@ -9,7 +9,110 @@
 
     <!-- MODALS
     ================================================== -->
-    @@include("partials/modal-profile.html")
+    @@include("partials/modal-profile.html", {
+      "modal_type"           : "profile-new",
+      "avatar_url"           : "@@avatar_url",
+      "first_name"           : "@@first_name",
+      "last_name"            : "@@last_name",
+      "full_name"            : "@@full_name",
+      "location"             : "@@location",
+      "email"                : "@@email",
+      "phone_number"         : "@@phone_number",
+      "job_offer"            : "@@job_offer",
+      "stage"                : "@@stage",
+      "contract_type"        : "@@contract_type",
+      "available_from"       : "@@available_from",
+      "salary_expectations"  : "@@salary_expectations",
+      "headline"             : "@@headline",
+      "about"                : "@@about",
+      "tag"  : {
+        "A"                  : "@@tag.A",
+        "B"                  : "@@tag.B",
+        "C"                  : "@@tag.C",
+        "D"                  : "@@tag.D",
+        "E"                  : "@@tag.E",
+        "F"                  : "@@tag.F",
+        "G"                  : "@@tag.G",
+        "H"                  : "@@tag.H",
+        "I"                  : "@@tag.I",
+        "J"                  : "@@tag.J"
+      },
+      "skill" : {
+        "A"                  : "@@skill.A",
+        "B"                  : "@@skill.B",
+        "C"                  : "@@skill.C",
+        "D"                  : "@@skill.D",
+        "E"                  : "@@skill.E",
+        "F"                  : "@@skill.F",
+        "G"                  : "@@skill.G",
+        "H"                  : "@@skill.H",
+        "I"                  : "@@skill.I",
+        "J"                  : "@@skill.J"
+      },
+      "work" : {
+        "A" : {
+          "job_or_school"    : "@@work.A.job_or_school",
+          "company_or_degree": "@@work.A.company_or_degree",
+          "from"             : "@@work.A.from",
+          "to"               : "@@work.A.to",
+          "location"         : "@@work.A.location"
+        },
+        "B" : {
+          "job_or_school"    : "@@work.B.job_or_school",
+          "company_or_degree": "@@work.B.company_or_degree",
+          "from"             : "@@work.B.from",
+          "to"               : "@@work.B.to",
+          "location"         : "@@work.B.location"
+        },
+        "C" : {
+          "job_or_school"    : "@@work.C.job_or_school",
+          "company_or_degree": "@@work.C.company_or_degree",
+          "from"             : "@@work.C.from",
+          "to"               : "@@work.C.to",
+          "location"         : "@@work.C.location"
+        }
+      },
+      "education": {
+        "A" : {
+          "job_or_school"    : "@@education.A.job_or_school",
+          "company_or_degree": "@@education.A.company_or_degree",
+          "from"             : "@@education.A.from",
+          "to"               : "@@education.A.to",
+          "location"         : "@@education.A.location"
+        },
+        "B" : {
+          "job_or_school"    : "@@education.B.job_or_school",
+          "company_or_degree": "@@education.B.company_or_degree",
+          "from"             : "@@education.B.from",
+          "to"               : "@@education.B.to",
+          "location"         : "@@education.B.location"
+        },
+        "C" : {
+          "job_or_school"    : "@@education.C.job_or_school",
+          "company_or_degree": "@@education.C.company_or_degree",
+          "from"             : "@@education.C.from",
+          "to"               : "@@education.C.to",
+          "location"         : "@@education.C.location"
+        }
+      },
+      "social_link" : {
+        "A" : {
+         "link_id"           : "@@social_link.A.link_id",
+         "link_name"         : "@@social_link.A.link_name",
+         "link_url"          : "@@social_link.A.link_url"
+        },
+        "B" : {
+         "link_id"           : "@@social_link.B.link_id",
+         "link_name"         : "@@social_link.B.link_name",
+         "link_url"          : "@@social_link.B.link_url"
+        },
+        "C" : {
+         "link_id"           : "@@social_link.C.link_id",
+         "link_name"         : "@@social_link.C.link_name",
+         "link_url"          : "@@social_link.C.link_url"
+        }
+      },
+    })
 
     <!-- NAVIGATION
     ================================================== -->

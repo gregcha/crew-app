@@ -3,18 +3,18 @@
   <!-- Avatar -->
   <div>
     <a href="#" class="avatar avatar-sm @@if(section != 'inbox'){d-none}">
-      <img src="@@avatar-url" class="avatar-img rounded">
+      <img src="@@avatar_url" class="avatar-img rounded">
     </a>
   </div>
 
   <div class="flex-grow-1 pl-3 mr-5">
-    <!-- Fullname -->
+    <!-- full_name -->
     <h4 class="mb-1 @@if(section != 'inbox'){d-none}">
-      <a href="@@link">@@fullname <i class="fe fe-external-link ml-2 text-primary"></i></a>
+      <a href="@@link_profile">@@full_name <i class="fe fe-external-link ml-2 text-primary"></i></a>
     </h4>
     <!-- Contact details -->
     <p class="small text-muted mb-0">
-      <a class="d-block text-reset">@@contact_details</a>
+      <a class="d-block text-reset">@@headline</a>
     </p>
   </div>
 

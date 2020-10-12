@@ -1,0 +1,249 @@
+<div class="profile profile-resume">
+
+  <div class="d-flex flex-column align-items-start px-5 mt-5">
+    <!-- Tags -->
+    <div class="d-flex flex-wrap">
+      @@if(tag.A != "") {
+        <span class="badge badge-soft-primary m-2">
+          <i class="fe fe-tag"></i> @@tag.A
+        </span>
+      }
+      @@if(tag.B != "") {
+        <span class="badge badge-soft-danger m-2">
+          <i class="fe fe-tag"></i> @@tag.B
+        </span>
+      }
+      @@if(tag.C != "") {
+        <span class="badge badge-soft-info m-2">
+          <i class="fe fe-tag"></i> @@tag.C
+        </span>
+      }
+      @@if(tag.D != "") {
+        <span class="badge badge-soft-secondary m-2">
+          <i class="fe fe-tag"></i> @@tag.D
+        </span>
+      }
+      @@if(tag.E != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.E
+        </span>
+      }
+      @@if(tag.F != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.F
+        </span>
+      }
+      @@if(tag.G != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.G
+        </span>
+      }
+      @@if(tag.H != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.H
+        </span>
+      }
+      @@if(tag.I != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.I
+        </span>
+      }
+      @@if(tag.J != "") {
+        <span class="badge badge-soft-warning m-2">
+          <i class="fe fe-tag"></i> @@tag.J
+        </span>
+      }
+      <span class="badge badge-light m-2">
+        <i class="fe fe-plus"></i>Add tag
+      </span>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-between px-5 mt-3">
+    <div>
+      <div class="input-group input-group-merge">
+        <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Contract type" style="border:none" value="@@contract_type">
+        <div class="input-group-prepend">
+          <div class="input-group-text" style="border:none;padding: 3px;">
+            <i class="fe fe-briefcase text-muted" style=";font-size:12px"></i>
+          </div>
+        </div>
+      </div>
+      <div class="input-group input-group-merge">
+        <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Salary expectations" style="border:none" value="@@salary_expectations">
+        <div class="input-group-prepend">
+          <div class="input-group-text" style="border:none;padding: 3px;">
+            <i class="fe fe-dollar-sign text-muted" style=";font-size:12px"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="input-group input-group-merge">
+        <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Availability to start" data-toggle="flatpickr" style="border:none" value="@@available_from">
+        <div class="input-group-prepend">
+          <div class="input-group-text" style="border:none;padding: 3px;">
+            <i class="fe fe-clock text-muted" style=";font-size:12px"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Summary -->
+  <div class="px-5 mt-4">
+    <h3 class="mb-2">Summary</h3>
+    <p>@@about</p>
+  </div>
+
+  <!-- Skills -->
+  <div class="px-5 mt-5">
+    @@if(skill.A != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.A
+      </button>
+    }
+    @@if(skill.B != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.B
+      </button>
+    }
+    @@if(skill.C != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.C
+      </button>
+    }
+    @@if(skill.D != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.D
+      </button>
+    }
+    @@if(skill.E != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.E
+      </button>
+    }
+    @@if(skill.F != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.F
+      </button>
+    }
+    @@if(skill.J != "") {
+      <button class="btn btn-sm btn-light mb-2">
+          <span class="fe fe-x"></span> @@skill.J
+      </button>
+    }
+    <button class="btn btn-sm btn-light mb-2">
+      <span class="fe fe-plus"></span><strong> Add skill</strong>
+    </button>
+  </div>
+
+  <!-- Experience -->
+  <div class="px-5 mt-5">
+    <h3 class="mb-2">Work experience<span class="small text-muted ml-2">—  @@years_xp</span></h3>
+
+    <ul class="profile-resume-work-education pl-4 mt-4 mb-0">
+      @@if(work.A.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@work.A.job_or_school",
+          "company_or_degree": "@@work.A.company_or_degree",
+          "from"             : "@@work.A.from",
+          "to"               : "@@work.A.to",
+          "duration"         : "@@work.A.duration",
+          "location"         : "@@work.A.location"
+        })
+      }
+      @@if(work.B.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@work.B.job_or_school",
+          "company_or_degree": "@@work.B.company_or_degree",
+          "from"             : "@@work.B.from",
+          "to"               : "@@work.B.to",
+          "duration"         : "@@work.B.duration",
+          "location"         : "@@work.B.location"
+        })
+      }
+      @@if(work.C.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@work.C.job_or_school",
+          "company_or_degree": "@@work.C.company_or_degree",
+          "from"             : "@@work.C.from",
+          "to"               : "@@work.C.to",
+          "duration"         : "@@work.C.duration",
+          "location"         : "@@work.C.location"
+        })
+      }
+    </ul>
+
+    <div class="ml-2 mt-2">
+      <a href="#" class="small">
+        + Show @@count_xp more
+      </a>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="px-5 mt-5">
+    <h3 class="mb-2">Education</h3>
+
+    <ul class="profile-resume-work-education pl-4 mt-4 mb-0">
+      @@if(education.A.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@education.A.job_or_school",
+          "company_or_degree": "@@education.A.company_or_degree",
+          "from"             : "@@education.A.from",
+          "to"               : "@@education.A.to",
+          "duration"         : "@@education.A.duration",
+          "location"         : "@@education.A.location"
+        })
+      }
+      @@if(education.B.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@education.B.job_or_school",
+          "company_or_degree": "@@education.B.company_or_degree",
+          "from"             : "@@education.B.from",
+          "to"               : "@@education.B.to",
+          "duration"         : "@@education.B.duration",
+          "location"         : "@@education.B.location"
+        })
+      }
+      @@if(education.C.job_or_school != "") {
+        @@include("resume-item.html", {
+          "job_or_school"    : "@@education.C.job_or_school",
+          "company_or_degree": "@@education.C.company_or_degree",
+          "from"             : "@@education.C.from",
+          "to"               : "@@education.C.to",
+          "duration"         : "@@education.C.duration",
+          "location"         : "@@education.C.location"
+        })
+      }
+    </ul>
+
+    <div class="ml-2 mt-2">
+      <a href="#" class="small">
+        + Show @@count_edu more
+      </a>
+    </div>
+  </div>
+
+  <!-- Social -->
+  <div class="px-5 mt-5">
+    <h3 class="mb-3">Social & Links</h3>
+    @@if(social_link.A != "") {
+      <a href="@@social_link.A.link_url" target="_blank">
+        <i class="text-primary mr-2 fab fa-@@social_link.A.link_id">
+        </i>@@social_link.A.link_name</p></a>
+    }
+    @@if(social_link.B != "") {
+      <a href="@@social_link.B.link_url" target="_blank">
+        <i class="text-primary mr-2 fab fa-@@social_link.B.link_id">
+        </i>@@social_link.B.link_name</p></a>
+    }
+    @@if(social_link.C != "") {
+      <a href="@@social_link.C.link_url" target="_blank">
+        <i class="text-primary mr-2 fab fa-@@social_link.C.link_id">
+        </i>@@social_link.C.link_name</p></a>
+    }
+  </div>
+</div>
