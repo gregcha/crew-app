@@ -14,6 +14,16 @@
   border-radius: .2rem;
 }
 
+.btn-soft-primary {
+  color: #2C7BE5;
+  background-color: #d5e5fa;
+}
+.btn-soft-primary[href]:hover, .btn-soft-primary[href]:focus {
+  color: #2C7BE5;
+  text-decoration: none;
+  background-color: #bed7f7;
+}
+
 @media (min-width: 768px) {
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container,
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-fluid,
