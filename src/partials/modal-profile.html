@@ -1,10 +1,10 @@
 <div class="modal fade w-100" id="@@modal_type" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document" style="max-width: 900px;height: 92%;">
+    <button type="button" class="list-alert-close close" data-dismiss="modal" style="position: absolute;top: 10px;right: 15px;z-index: 2;">
+      <span aria-hidden="true">×</span>
+    </button>
     <div class="modal-content h-100" style="background:#F9FBFD; overflow:scroll;">
 
-      <button type="button" class="list-alert-close close" data-dismiss="modal" style="position: absolute;top: 10px;right: 10px;">
-        <span aria-hidden="true">×</span>
-      </button>
 
       <div class="container-fluid">
         <div class="row py-5 pt-4">
@@ -24,7 +24,7 @@
           </div>
 
           <div class="col-8">
-            <div data-spy="scroll" id="profile-edit-form" class="container" data-offset="0" style="padding-bottom: 500px;">
+            <div data-spy="scroll" id="profile-edit-form" class="container" data-offset="0" style="padding-bottom: 320px;">
 
               <a class="anchor" id="personal-info"></a>
               <div class="header mb-3">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-12 col-md-4 pl-2 pr-0 mt-2">
                   <!-- Dropzone -->
-                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "@@avatar_url", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "/assets/img/avatars/profiles/avatar-@@id.jpg", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
                     <!-- Fallback -->
                     <div class="fallback">
@@ -407,8 +407,8 @@
                     </select>
                   </div>
                   <div class="mb-3">
-                    <label class="small">Salary expectations</label>
-                    <input type="text" class="form-control" placeholder="Salary expectations" value="@@if(modal_type != 'profile-new'){@@salary_expectations}">
+                    <label class="small">Salary</label>
+                    <input type="text" class="form-control" placeholder="Salary" value="@@if(modal_type != 'profile-new'){@@salary_expectations}">
                   </div>
                   <div class="mb-3">
                     <label class="small">Tags</label>

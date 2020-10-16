@@ -109,10 +109,10 @@
   background: $white;
   border-bottom: 1px solid $gray-200;
   border-radius: 0 !important;
-  padding: 15px;
+  padding: 20px;
   &:hover {
     background: $gray-100;
-    .inbox-notification-item-timestamp {
+    .inbox-notification-item-right {
       display: none;
       font-size: 11px;
     }
@@ -195,17 +195,13 @@
   background: $white;
   border: 1px solid $gray-200;
   border-radius: 2px;
+  // box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.1); Maybe?
 }
 
 .timeline-item-header {
   padding: 1rem;
   margin-bottom: -1px;
   border-bottom: 1px solid $gray-200;
-  border-radius: 2px;
-}
-
-.timeline-item-body {
-  padding: 1rem;
   border-radius: 2px;
 }
 
@@ -254,6 +250,12 @@
   }
   .select2-selection--multiple {
     padding: 10px;
+  }
+}
+
+#career-page-builder {
+  .dz-default {
+    padding:3.8rem 1rem;
   }
 }
 
@@ -338,6 +340,10 @@
   }
 }
 
+.bulk-actions {
+  left: auto !important;
+  transform: inherit;
+}
 
 
 

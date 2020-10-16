@@ -1,37 +1,29 @@
-<div class="inbox-notification-item d-flex align-items-center">
+<a class="inbox-notification-item d-flex align-items-start text-reset" href="@@link">
 
-    <!-- Checkbox -->
-<!--     <div class="col-1">
-      <div class="custom-control custom-checkbox table-checkbox">
-        <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-        <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
-      </div>
-    </div> -->
+  <div class="avatar avatar-xs">
+    <img src="/assets/img/avatars/profiles/avatar-@@id.jpg" class="avatar-img rounded-circle">
+  </div>
 
-    <div class="flex-grow-1">
-      <!-- Name -->
-      <h4 class="mb-1">
-        <a href="@@link">@@full_name</a>
-      </h4>
+  <div class="flex-grow-1 ml-3">
+    <h4 class="my-1"><strong>@@full_name</strong>
+      @@if(job_offer != "") {
+        <span class="small text-muted"> — @@job_offer</span>
+      }
+    </h4>
+    <p class="mb-0"><i class="fe fe-@@icon text-primary mr-1"></i>@@title</p>
+    <p class="text-muted small mb-0">@@body</p>
+  </div>
 
-      <!-- Title -->
-      <p class="small mb-0">
-        <i class="fe fe-@@icon text-primary"></i> @@title</a>
-      </p>
-    </div>
+  <div class="inbox-notification-item-right text-right">
+    <p class="text-muted mt-2" style="font-size: 12px;">
+      @@timestamp
+    </p>
+  </div>
 
-    <!-- Timestamp -->
-    <div>
-      <p class="inbox-notification-item-timestamp text-muted mb-0" style="font-size: 12px;">
-        <a class="d-block text-reset" href="#">@@timestamp</a>
-      </p>
-    </div>
+  <div class="inbox-notification-item-button">
+    <button class="btn btn-white btn-sm">
+      <span class="fe fe-check"></span> Done
+    </button>
+  </div>
 
-    <!-- Bouton -->
-    <div class="inbox-notification-item-button">
-      <button class="btn btn-white btn-sm">
-        <span class="fe fe-check"></span> Done
-      </button>
-    </div>
-
-</div>
+</a>

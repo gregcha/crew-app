@@ -11,7 +11,7 @@
     ================================================== -->
     @@include("modal-profile.html", {
       "modal_type"           : "profile-edit",
-      "avatar_url"           : "@@avatar_url",
+      "id"                   : "@@id",
       "first_name"           : "@@first_name",
       "last_name"            : "@@last_name",
       "full_name"            : "@@full_name",
@@ -130,13 +130,11 @@
     ================================================== -->
     <div class="main-content">
       @@include("topbar-profile.html", {
+        "id"        : "@@id",
         "full_name" : "@@full_name",
         "headline"  : "@@headline",
-        "avatar_url": "@@avatar_url",
         "job_offer" : "@@job_offer",
-        "stage"     : "@@stage",
-        "origin"    : "Inbox",
-        "origin-url": "../inbox/inbox_1.html"
+        "stage"     : "@@stage"
       })
 
       <!-- Talent profile -->
@@ -151,8 +149,8 @@
               "available_from"       : "@@available_from",
               "salary_expectations"  : "@@salary_expectations",
               "years_xp"             : "@@years_xp",
-              "count_xp"             : "@@count_xp",
-              "count_edu"            : "@@count_edu",
+              "more_xp"             : "@@more_xp",
+              "more_edu"            : "@@more_edu",
               "tag" : {
                 "A"                  : "@@tag.A",
                 "B"                  : "@@tag.B",
@@ -224,6 +222,7 @@
                   "job_or_school"    : "@@education.C.job_or_school",
                   "company_or_degree": "@@education.C.company_or_degree",
                   "from"             : "@@education.C.from",
+                  "to"               : "@@education.C.to",
                   "duration"         : "@@education.C.duration",
                   "location"         : "@@education.C.location"
                 }
@@ -252,66 +251,72 @@
           <div class="col-12 col-xl-7 p-0">
             <div class="timeline-profile">
               @@include("timeline.html", {
-                "timeline"             : {
+                "timeline" : {
                   "A"  : {
-                    "type"             : "@@timeline.A.type",
-                    "scheduled"        : "@@timeline.A.scheduled",
-                    "icon"             : "@@timeline.A.icon",
-                    "avatar_url"       : "@@timeline.A.avatar_url",
-                    "author"           : "@@timeline.A.author",
-                    "title"            : "@@timeline.A.title",
-                    "timestamp"        : "@@timeline.A.timestamp",
-                    "details"          : "@@timeline.A.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.A.author",
+                    "title"     : "@@timeline.A.title",
+                    "icon"      : "@@timeline.A.icon",
+                    "scheduled" : "@@timeline.A.scheduled",
+                    "timestamp" : "@@timeline.A.timestamp",
+                    "details"   : "@@timeline.A.details",
+                    "see_more"  : "@@timeline.A.see_more"
                   },
                   "B"  : {
-                    "type"             : "@@timeline.B.type",
-                    "scheduled"        : "@@timeline.B.scheduled",
-                    "icon"             : "@@timeline.B.icon",
-                    "avatar_url"       : "@@timeline.B.avatar_url",
-                    "author"           : "@@timeline.B.author",
-                    "title"            : "@@timeline.B.title",
-                    "timestamp"        : "@@timeline.B.timestamp",
-                    "details"          : "@@timeline.B.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.B.author",
+                    "title"     : "@@timeline.B.title",
+                    "icon"      : "@@timeline.B.icon",
+                    "scheduled" : "@@timeline.B.scheduled",
+                    "timestamp" : "@@timeline.B.timestamp",
+                    "details"   : "@@timeline.B.details",
+                    "see_more"  : "@@timeline.B.see_more"
                   },
                   "C"  : {
-                    "type"             : "@@timeline.C.type",
-                    "scheduled"        : "@@timeline.C.scheduled",
-                    "icon"             : "@@timeline.C.icon",
-                    "avatar_url"       : "@@timeline.C.avatar_url",
-                    "author"           : "@@timeline.C.author",
-                    "title"            : "@@timeline.C.title",
-                    "timestamp"        : "@@timeline.C.timestamp",
-                    "details"          : "@@timeline.C.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.C.author",
+                    "title"     : "@@timeline.C.title",
+                    "icon"      : "@@timeline.C.icon",
+                    "scheduled" : "@@timeline.C.scheduled",
+                    "timestamp" : "@@timeline.C.timestamp",
+                    "details"   : "@@timeline.C.details",
+                    "see_more"  : "@@timeline.C.see_more"
                   },
                   "D"  : {
-                    "type"             : "@@timeline.D.type",
-                    "scheduled"        : "@@timeline.D.scheduled",
-                    "icon"             : "@@timeline.D.icon",
-                    "avatar_url"       : "@@timeline.D.avatar_url",
-                    "author"           : "@@timeline.D.author",
-                    "title"            : "@@timeline.D.title",
-                    "timestamp"        : "@@timeline.D.timestamp",
-                    "details"          : "@@timeline.D.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.D.author",
+                    "title"     : "@@timeline.D.title",
+                    "icon"      : "@@timeline.D.icon",
+                    "scheduled" : "@@timeline.D.scheduled",
+                    "timestamp" : "@@timeline.D.timestamp",
+                    "details"   : "@@timeline.D.details",
+                    "see_more"  : "@@timeline.D.see_more"
                   },
                   "E"  : {
-                    "type"             : "@@timeline.E.type",
-                    "scheduled"        : "@@timeline.E.scheduled",
-                    "icon"             : "@@timeline.E.icon",
-                    "avatar_url"       : "@@timeline.E.avatar_url",
-                    "author"           : "@@timeline.E.author",
-                    "title"            : "@@timeline.E.title",
-                    "timestamp"        : "@@timeline.E.timestamp",
-                    "details"          : "@@timeline.E.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.E.author",
+                    "title"     : "@@timeline.E.title",
+                    "icon"      : "@@timeline.E.icon",
+                    "scheduled" : "@@timeline.E.scheduled",
+                    "timestamp" : "@@timeline.E.timestamp",
+                    "details"   : "@@timeline.E.details",
+                    "see_more"  : "@@timeline.E.see_more"
                   },
                   "F"  : {
-                    "type"             : "@@timeline.F.type",
-                    "scheduled"        : "@@timeline.F.scheduled",
-                    "icon"             : "@@timeline.F.icon",
-                    "avatar_url"       : "@@timeline.F.avatar_url",
-                    "author"           : "@@timeline.F.author",
-                    "title"            : "@@timeline.F.title",
-                    "timestamp"        : "@@timeline.F.timestamp",
-                    "details"          : "@@timeline.F.details"
+                    "id"        : "@@id",
+                    "full_name" : "@@full_name",
+                    "author"    : "@@timeline.F.author",
+                    "title"     : "@@timeline.F.title",
+                    "icon"      : "@@timeline.F.icon",
+                    "scheduled" : "@@timeline.F.scheduled",
+                    "timestamp" : "@@timeline.F.timestamp",
+                    "details"   : "@@timeline.F.details",
+                    "see_more"  : "@@timeline.F.see_more"
                   }
                 }
               })

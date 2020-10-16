@@ -12,7 +12,7 @@
        </div>
       </div>
       <div class="col-12 col-md-4 p-0 input-group input-group-merge">
-       <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Salary expectations" style="border:none" value="@@salary_expectations">
+       <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Salary" style="border:none" value="@@salary_expectations">
        <div class="input-group-prepend">
          <div class="input-group-text" style="border:none;padding: 3px;">
            <i class="fe fe-dollar-sign text-muted" style=";font-size:12px"></i>
@@ -98,48 +98,52 @@
   <!-- Skills -->
   <div class="px-5 mt-3">
     @@if(skill.A != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.A
       </button>
     }
     @@if(skill.B != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.B
       </button>
     }
     @@if(skill.C != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.C
       </button>
     }
     @@if(skill.D != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.D
       </button>
     }
     @@if(skill.E != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.E
       </button>
     }
     @@if(skill.F != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.F
       </button>
     }
     @@if(skill.J != "") {
-      <button class="btn btn-sm btn-soft-primary mb-2">
+      <button class="btn btn-sm btn-white mb-2">
           <span class="fe fe-x"></span> @@skill.J
       </button>
     }
-    <button class="btn btn-sm btn-link mb-2">
+    <button class="btn btn-sm btn-link mb-2 p-0">
       <span class="fe fe-plus"></span>Add skill
     </button>
   </div>
 
   <!-- Experience -->
   <div class="px-5 mt-5">
-    <h3 class="mb-2">Work experience<span class="small text-muted ml-2">—  @@years_xp</span></h3>
+    <h3 class="mb-2">Work experience<span class="small text-muted ml-2">
+      @@if (years_xp != "") {
+        —  @@years_xp</span>
+      }
+    </h3>
 
     <ul class="profile-resume-work-education pl-4 mt-4 mb-0">
       @@if(work.A.job_or_school != "") {
@@ -174,11 +178,13 @@
       }
     </ul>
 
-    <div class="ml-2 mt-2">
-      <a href="#" class="text-muted small">
-        + Show @@count_xp more
-      </a>
-    </div>
+    @@if(more_xp != "") {
+      <div class="ml-2 mt-2">
+        <a href="#" class="text-muted small">
+          + Show @@more_xp more
+        </a>
+      </div>
+    }
   </div>
 
   <!-- Education -->
@@ -218,30 +224,35 @@
       }
     </ul>
 
-    <div class="ml-2 mt-2">
-      <a href="#" class="text-muted small">
-        + Show @@count_edu more
-      </a>
-    </div>
+    @@if(more_edu != "") {
+      <div class="ml-2 mt-2">
+        <a href="#" class="text-muted small">
+          + Show @@more_edu more
+        </a>
+      </div>
+    }
   </div>
 
   <!-- Social -->
   <div class="px-5 mt-5">
     <h3 class="mb-3">Social & Links</h3>
     @@if(social_link.A != "") {
-      <a href="@@social_link.A.link_url" target="_blank" class="small">
-        <i class="text-primary mr-2 fab fa-@@social_link.A.link_id">
-        </i>@@social_link.A.link_name</p></a>
+      <a href="@@social_link.A.link_url" target="_blank" class="small ml-2">
+        <i class="text-primary mr-1 fab fa-@@social_link.A.link_id"></i>
+        @@social_link.A.link_name
+      </a>
     }
     @@if(social_link.B != "") {
-      <a href="@@social_link.B.link_url" target="_blank" class="small">
-        <i class="text-primary mr-2 fab fa-@@social_link.B.link_id">
-        </i>@@social_link.B.link_name</p></a>
+      <a href="@@social_link.B.link_url" target="_blank" class="small ml-2">
+        <i class="text-primary mr-1 fab fa-@@social_link.B.link_id"></i>
+        @@social_link.B.link_name
+      </a>
     }
     @@if(social_link.C != "") {
-      <a href="@@social_link.C.link_url" target="_blank" class="small">
-        <i class="text-primary mr-2 fab fa-@@social_link.C.link_id">
-        </i>@@social_link.C.link_name</p></a>
+      <a href="@@social_link.C.link_url" target="_blank" class="small ml-2">
+        <i class="text-primary mr-1 fab fa-@@social_link.C.link_id"></i>
+        @@social_link.C.link_name
+      </a>
     }
   </div>
 </div>

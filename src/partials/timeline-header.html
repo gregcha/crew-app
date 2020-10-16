@@ -1,41 +1,159 @@
-<div class="timeline-header d-flex align-items-center sticky-top">
+<div class="timeline-header d-flex align-items-center sticky-top" style="z-index: 10">
 
   <!-- Avatar -->
   <div>
     <a href="#" class="avatar avatar-sm @@if(section != 'inbox'){d-none}">
-      <img src="@@avatar_url" class="avatar-img rounded">
+      <img src="/assets/img/avatars/profiles/avatar-@@id.jpg" class="avatar-img rounded">
     </a>
   </div>
 
   <div class="flex-grow-1 pl-3 mr-5">
     <!-- full_name -->
     <h4 class="mb-1 @@if(section != 'inbox'){d-none}">
-      <a href="@@link_profile">@@full_name <i class="fe fe-external-link ml-2 text-primary"></i></a>
+      <a href="/profile/profile_@@id.html">@@full_name <i class="fe fe-external-link ml-2 text-primary"></i></a>
     </h4>
-    <!-- Contact details -->
+    <!-- Headline -->
     <p class="small text-muted mb-0">
-      <a class="d-block text-reset">@@headline</a>
+      <a class="d-block text-reset">@@phone_number</a>
     </p>
   </div>
 
   <!-- Position selector -->
   <div class="mr-2">
-    <select class="custom-select custom-select-sm" data-toggle="select">
-      <option>Backend Engineer</option>
-      <option>Frontend Developer</option>
-      <option>Product Manager</option>
-      <option>Marketing & Sales</option>
-    </select>
+    @@if(job_offer == '') {
+      <select class="custom-select custom-select-sm" data-toggle="select" data-placeholder="No job offer">
+        <option></option>
+        <option>Backend Engineer</option>
+        <option>Frontend Developer</option>
+        <option>Product Manager</option>
+        <option>Marketing & Sales</option>
+      </select>
+    }
+    @@if(job_offer == 'Backend Engineer') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option selected="selected">Backend Engineer</option>
+        <option>Frontend Developer</option>
+        <option>Product Manager</option>
+        <option>Marketing & Sales</option>
+      </select>
+    }
+    @@if(job_offer == 'Frontend Developer') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Backend Engineer</option>
+        <option selected="selected">Frontend Developer</option>
+        <option>Product Manager</option>
+        <option>Marketing & Sales</option>
+      </select>
+    }
+    @@if(job_offer == 'Product Manager') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Backend Engineer</option>
+        <option>Frontend Developer</option>
+        <option selected="selected">Product Manager</option>
+        <option>Marketing & Sales</option>
+      </select>
+    }
+    @@if(job_offer == 'Marketing & Sales') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Backend Engineer</option>
+        <option>Frontend Developer</option>
+        <option>Product Manager</option>
+        <option selected="selected">Marketing & Sales</option>
+      </select>
+    }
   </div>
 
   <!-- Stage selector -->
   <div class="mr-1">
-    <select class="custom-select custom-select-sm" data-toggle="select">
-      <option>Sourced</option>
-      <option>Contacted</option>
-      <option>Applied</option>
-      <option>Interviewing</option>
-    </select>
+    @@if(stage == '') {
+      <select class="custom-select custom-select-sm" data-toggle="select" data-placeholder="No stage">
+        <option></option>
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+
+    @@if(stage == 'Sourced') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option selected="selected">Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+    @@if(stage == 'Applied') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option selected="selected">Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }      @@if(stage == 'Contacted') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option selected="selected">Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+    @@if(stage == 'Interview') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option selected="selected">Interview</option>
+        <option>Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+    @@if(stage == 'Offer sent') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option selected="selected">Offer sent</option>
+        <option>Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+    @@if(stage == 'Hired') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option selected="selected">Hired</option>
+        <option>Declined</option>
+      </select>
+    }
+    @@if(stage == 'Sourced') {
+      <select class="custom-select custom-select-sm" data-toggle="select">
+        <option>Sourced</option>
+        <option>Applied</option>
+        <option>Contacted</option>
+        <option>Interview</option>
+        <option>Offer sent</option>
+        <option>Declined</option>
+        <option selected="selected">Declined</option>
+      </select>
+    }
   </div>
 
   <!-- More actions dropdown -->

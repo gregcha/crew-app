@@ -11464,6 +11464,15 @@ a:focus, button:focus {
   line-height: .5;
   border-radius: .2rem; }
 
+.btn-soft-primary {
+  color: #2C7BE5;
+  background-color: #d5e5fa; }
+
+.btn-soft-primary[href]:hover, .btn-soft-primary[href]:focus {
+  color: #2C7BE5;
+  text-decoration: none;
+  background-color: #bed7f7; }
+
 @media (min-width: 768px) {
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container,
   .navbar-vertical:not([style*="display: none"]) ~ .main-content .container-fluid,
@@ -11546,10 +11555,10 @@ a:focus, button:focus {
   background: #FFFFFF;
   border-bottom: 1px solid #EDF2F9;
   border-radius: 0 !important;
-  padding: 15px; }
+  padding: 20px; }
   .inbox-notification-item:hover {
     background: #F9FBFD; }
-    .inbox-notification-item:hover .inbox-notification-item-timestamp {
+    .inbox-notification-item:hover .inbox-notification-item-right {
       display: none;
       font-size: 11px; }
     .inbox-notification-item:hover .inbox-notification-item-button {
@@ -11620,10 +11629,6 @@ a:focus, button:focus {
   border-bottom: 1px solid #EDF2F9;
   border-radius: 2px; }
 
-.timeline-item-body {
-  padding: 1rem;
-  border-radius: 2px; }
-
 .timeline-item-separator {
   position: relative;
   height: 2rem;
@@ -11661,6 +11666,9 @@ a:focus, button:focus {
 
 #profile-edit-form .select2-selection--multiple {
   padding: 10px; }
+
+#career-page-builder .dz-default {
+  padding: 3.8rem 1rem; }
 
 .chrome-extension {
   background-image: url(../img/covers/linkedin-profile.png);
@@ -11719,3 +11727,7 @@ a:focus, button:focus {
   .button-drag:hover {
     cursor: -webkit-grab !important;
     cursor: grab !important; }
+
+.bulk-actions {
+  left: auto !important;
+  transform: inherit; }

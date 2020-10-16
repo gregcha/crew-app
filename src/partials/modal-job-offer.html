@@ -1,37 +1,91 @@
 <!-- MODAL: Job offer edit -->
 <div class="modal fade w-100" id="job-offer-edit" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document" style="max-width: 900px;height: 92%;">
+    <button type="button" class="list-alert-close close" data-dismiss="modal" style="position: absolute;top: 10px;right: 10px;z-index: 2">
+      <span aria-hidden="true">×</span>
+    </button>
     <div class="modal-content h-100" style="background:#F9FBFD; overflow:scroll;">
-      <button type="button" class="list-alert-close close" data-dismiss="modal" style="position: absolute;top: 10px;right: 10px;">
-        <span aria-hidden="true">×</span>
-      </button>
       <div class="d-flex align-items-start justify-content-between p-4">
 
 
         <div class="w-100 mt-3 mx-5" style="position: relative;">
-          <ul class="nav nav-tabs mb-4" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
-            <li class="nav-item">
-              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Job description</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Apply form</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Members</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Pipeline</a>
-            </li>
-            <li class="nav-item d-flex align-items-center ml-auto">
-              <a class="btn btn-sm btn-white mr-3" target="_blank">
-                <i class="fe fe-external-link text-primary"></i> View job
-              </a>
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label text-small" for="customSwitch1">Published</label>
+          <div class="header">
+            <div class="header-body">
+              <div class="row align-items-center">
+                <div class="col">
+
+                    <div class="header mb-3">
+                      <h6 class="header-pretitle text-primary">
+                        <a href=""><i class="fe fe-external-link"></i> View job offer</a>
+                      </h6>
+                      <div class="d-flex align-items-center">
+                        <h2 class="header-title mr-3">
+                          Backend Engineer
+                        </h2>
+                        <!-- <span class="badge badge-soft-success">Online</span> -->
+                        <span class="badge badge-soft-secondary">Offline</span>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-auto d-flex flex-column align-items-end text-right">
+
+                  <div class="dropdown mb-2 mr-2">
+                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Actions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonTwo" style="">
+                      <a class="dropdown-item" href="#">Turn job offline <span class="text-success">●</span></a>
+                      <a class="dropdown-item" href="#">Duplicate job</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-danger" href="#">Delete job</a>
+                    </div>
+                  </div>
+
+<!--                   <div class="btn-group mb">
+                    <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only">More actions</span>
+                    </button>
+                    <div class="dropdown-menu" style="">
+
+                      <a class="dropdown-item" href="#">Turn job offline ●</a>
+                      <a class="dropdown-item" href="#">Duplicate job</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-danger" href="#">Delete job</a>
+                    </div>
+                  </div>
+
+                  <span class="text-muted small mt-2">
+                    <i class="fe fe-alert-circle"></i>
+                    There are unsaved changes — <a href="">Preview</a>
+                  </span> -->
+
+                </div>
               </div>
-            </li>
-          </ul>
+              <div class="row">
+                <div class="col-12">
+
+                  <ul class="nav nav-tabs header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Job description</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Apply form</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Members</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Pipeline</a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
               <div class="container">
@@ -73,7 +127,7 @@
                     <input type="text" class="form-control" placeholder="Salary">
                   </div>
                 </div>
-                <div data-toggle="quill" data-options='{"placeholder": "Enter the job description"}' style="height: 240px;"></div>
+                <div data-toggle="quill" data-options='{"placeholder": "Enter the job description"}' style="height: 190px;"></div>
               </div>
             </div>
 
@@ -181,7 +235,7 @@
                 </div>
               </div>
               <div class="card-body d-flex align-items-center justify-content-between px-0 py-3">
-                <p class="mb-0">Salary expectations</p>
+                <p class="mb-0">Salary</p>
                 <div class="btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-sm btn-white ml-4">
                     <input type="radio" name="option" id="option1"> <i class="fe fe-check-circle"></i> Required
@@ -444,7 +498,7 @@
                   </select>
                 </div>
                 <div class="dropdown show">
-                  <button class="btn btn-sm btn-primary" type="button" id="inviteMember" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <button class="btn btn-sm btn-outline-primary" type="button" id="inviteMember" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Save as template
                   </button>
                   <form class="dropdown-menu dropdown-menu-right dropdown-menu-card mt-3" aria-labelledby="inviteMember" x-placement="bottom-end" style="position: absolute; transform: translate3d(-249px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
