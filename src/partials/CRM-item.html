@@ -12,8 +12,8 @@
       <div class="avatar avatar-sm align-middle mr-3">
         <img class="avatar-img rounded" src="/assets/img/avatars/profiles/avatar-@@id.jpg">
       </div>
-      <div class="d-flex flex-column align-items-start justify-content-center">
-        <h4 class="item-name mb-0">@@full_name</h4>
+      <div>
+        <h4 class="item-name mb-1">@@full_name</h4>
         <p class="text-muted small mb-0">@@headline</p>
       </div>
     </a>
@@ -35,6 +35,9 @@
   <td class="py-0">
     <!-- Skills -->
     <div class="d-flex flex-wrap">
+      @@if(skill.A == "") {
+        <span class="text-muted">-</span>
+      }
       @@if(skill.A != "") {
         <span class="badge badge-light m-1">@@skill.A</span>
       }

@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="../assets/fonts/feather/feather.css" />
+    <link rel="stylesheet" href="../assets/libs/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="../assets/libs/quill/dist/quill.core.css" />
+    <link rel="stylesheet" href="../assets/libs/highlightjs/styles/vs2015.css" />
+
+    <!-- Map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    
+    <link rel="stylesheet" href="../assets/css/theme.min.css">
+      
+    <!-- Title -->
+    <title>Crew - Alexandre Vallet</title>
+
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    <div class="modal fade w-100" id="profile-edit" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document" style="max-width: 900px;height: 92%;">
+        <button type="button" class="list-alert-close close" data-dismiss="modal" style="position: absolute;top: 10px;right: 15px;z-index: 2;">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="modal-content h-100" style="background:#F9FBFD; overflow:scroll;">
+
+
+          <div class="container-fluid">
+            <div class="row py-5 pt-4">
+
+              <div class="col-3 mr-3">
+                <nav class="navbar flex-column" style="position: fixed;background:#F9FBFD;border: none">
+                  <a class="nav-link w-100" href="#personal-info">Personal information</a>
+                  <a class="nav-link w-100" href="#contact-details">Contact details</a>
+                  <a class="nav-link w-100" href="#summary">Summary</a>
+                  <a class="nav-link w-100" href="#skills">Skills</a>
+                  <a class="nav-link w-100" href="#work-experience">Work experience</a>
+                  <a class="nav-link w-100" href="#education">Education</a>
+                  <a class="nav-link w-100" href="#links-social">Links & social</a>
+                  <a class="nav-link w-100" href="#process-info">Process information</a>
+                  <button class="btn btn-primary mt-4 w-100">Save profile</button>
+                </nav>
+              </div>
+
+              <div class="col-8">
+                <div data-spy="scroll" id="profile-edit-form" class="container" data-offset="0" style="padding-bottom: 320px;">
+
+                  <a class="anchor" id="personal-info"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Personal information
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+                    <div class="col-12 col-md-8 pl-0 pr-2 mt-2">
+                      <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="First name" value="">
+                      </div>
+                      <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Last name" value="">
+                      </div>
+                      <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Location" value="">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 pl-2 pr-0 mt-2">
+                      <!-- Dropzone -->
+                      <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "/assets/img/avatars/profiles/avatar-2.jpg", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+
+                        <!-- Fallback -->
+                        <div class="fallback">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="projectCoverUploads">
+                            <label class="custom-file-label" for="projectCoverUploads">Choose file</label>
+                          </div>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="dz-preview dz-preview-single">
+                          <div class="dz-preview-cover">
+                            <img class="dz-preview-img" src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="anchor" id="contact-details"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Contacts details
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+                    <div class="col-12 col-md-6 pl-0 pr-2 mt-2">
+                      <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Email" value="">
+                      </div>
+                      <button type="button" class="btn btn-link btn-sm" >
+                        <a href="#"><i class="fe fe-plus"></i>Add an email</a>
+                      </button>
+                    </div>
+                    <div class="col-12 col-md-6 pl-2 pr-0 mt-2">
+                      <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Phone number" value="">
+                      </div>
+                      <button type="button" class="btn btn-link btn-sm" >
+                        <a href="#"><i class="fe fe-plus"></i>Add a phone number</a>
+                      </button>
+                    </div>
+                  </div>
+
+                  <a class="anchor" id="summary"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Summary
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+                    <div class="col-12 p-0 mb-3">
+                      <div class="mb-2">
+                        <label class="small">Headline</label>
+                        <input type="text" class="form-control" placeholder="Email" value="">
+                      </div>
+                    </div>
+                    <div class="col-12 p-0">
+                      <label class="small">About</label>
+                      <div data-toggle="quill" data-options='{"placeholder": "Profile details", "modules" : {"toolbar":false}}' style="height: 240px;"></div>
+                    </div>
+                  </div>
+
+                  <a class="anchor" id="skills"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Skills
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="my-4 mx-0">
+                    <div class="col-12 p-0">
+                      <select class="form-control form-control-lg" data-toggle="select" tabindex="-1" aria-hidden="true" multiple>
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                      </select>
+                    </div>
+                  </div>
+
+                  <a class="anchor" id="work-experience"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Work experience
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+
+                    <button type="button" class="btn btn-link btn-sm" >
+                      <a href="#"><i class="fe fe-plus"></i>Add an experience</a>
+                    </button>
+
+                  </div>
+
+                  <a class="anchor" id="education"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Education
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                    
+                      <div class="work-education-item form-row my-3 mx-0">
+                        <div style="position: absolute; top:-4px; right: -32px; display: flex;flex-direction: column">
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-grip-vertical button-drag mb-2"></i>
+                          </button>
+                          <button type="button" class="list-alert-close close">
+                            <i class="fas fa-trash" style="font-size: 16px;color:#E63757"></i>
+                          </button>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job position" value="">
+                          </div>
+
+                          <div class="d-flex">
+                            <div class="mb-2 mr-2">
+                              <input type="text" class="form-control" placeholder="From" data-toggle="flatpickr" value="">
+                            </div>
+                            <div class="mb-2">
+                              <input type="text" class="form-control" placeholder="To" data-toggle="flatpickr" value="">
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="col-12 col-md-6 pl-2 pr-0">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company" value="">
+                          </div>
+                          <div>
+                            <input type="text" class="form-control" placeholder="Location" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                    
+
+                    <button type="button" class="btn btn-link btn-sm" >
+                      <a href="#"><i class="fe fe-plus"></i>Add an education</a>
+                    </button>
+                  </div>
+
+                  <a class="anchor" id="links-social"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Links & social
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="my-2 mx-0">
+
+                    
+                      <div class="d-flex align-items-center my-2">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <input type="text" class="form-control ml-3 w-200" value="">
+                        <button type="button" class="list-alert-close close ml-4" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+
+                    
+                    
+                      <div class="d-flex align-items-center my-2">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <input type="text" class="form-control ml-3 w-200" value="">
+                        <button type="button" class="list-alert-close close ml-4" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+
+                    
+                    
+                      <div class="d-flex align-items-center my-2">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <input type="text" class="form-control ml-3 w-200" value="">
+                        <button type="button" class="list-alert-close close ml-4" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+
+                    
+
+
+                    <button type="button" class="btn btn-link btn-sm" >
+                      <a href="#"><i class="fe fe-plus"></i>Add a link</a>
+                    </button>
+                  </div>
+
+                  <a class="anchor" id="process-info"></a>
+                  <div class="header mb-3">
+                    <div class="header-body pb-3">
+                      <h4 class="header-title">
+                        Process information
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="form-row my-2 mx-0">
+                    <div class="col-12 col-md-6 pl-0 pr-2">
+                      <div class="mb-3">
+                        <label class="small">Job offer</label>
+                        <select class="custom-select" data-toggle="select">
+                          
+                            <option>Backend Engineer</option>
+                            <option>Frontend Developer</option>
+                            <option>Product Manager</option>
+                            <option>Marketing & Sales</option>
+                          
+
+                          
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="small">Contract type</label>
+                        <select class="custom-select" data-toggle="select">
+                          
+                            <option>Full-time</option>
+                            <option>Freelance</option>
+                            <option>Internship</option>
+                          
+
+                          
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="small">Available from</label>
+                        <input type="text" class="form-control" placeholder="Available from" data-toggle="flatpickr" value="">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 pr-0 pl-2">
+                      <div class="mb-3">
+                        <label class="small">Stage</label>
+                        <select class="custom-select" data-toggle="select">
+                          
+                            <option>Sourced</option>
+                            <option>Applied</option>
+                            <option>Contacted</option>
+                            <option>Interview</option>
+                            <option>Offer sent</option>
+                            <option>Hired</option>
+                            <option>Declined</option>
+                          
+
+                          
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="small">Salary</label>
+                        <input type="text" class="form-control" placeholder="Salary" value="">
+                      </div>
+                      <div class="mb-3">
+                        <label class="small">Tags</label>
+                        <select class="form-control form-control-lg" data-toggle="select" tabindex="-1" aria-hidden="true" multiple>
+                          
+
+                          
+                          
+                          
+                          
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- NAVIGATION
+    ================================================== -->
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidebar">
+      <div class="container-fluid">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo-dark.svg" class="navbar-brand-img
+          mx-auto" style="width:100px">
+        </a>
+
+        <!-- User (xs) -->
+        <div class="navbar-user d-md-none">
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+
+            <!-- Toggle -->
+            <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-sm">
+                <img src="https://ca.slack-edge.com/T029MPGH6-U013V6LSE7J-03ad80833708-512" class="avatar-img rounded">
+              </div>
+            </a>
+
+            <!-- Menu -->
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="#" class="dropdown-item">Link</a>
+              <a href="#" class="dropdown-item">Link</a>
+              <hr class="dropdown-divider" />
+              <a href="#" class="dropdown-item">Logout</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+          <!-- Navigation -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="../inbox/inbox_1.html" >
+                <i class="fe fe-inbox"></i> Inbox
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../crm.html">
+                <i class="fe fe-users"></i> Talents
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="../career-page-builder.html">
+                <i class="fe fe-zap"></i> Tools
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">
+                <i class="fe fe-settings"></i> Settings
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <hr class="navbar-divider my-3">
+
+          <!-- Jobs -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="../job-offer.html">
+                Backend Engineer
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Frontend Developer
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Product Manager
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Marketing & Sales
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-create" href="#">
+                <i class="fe fe-plus"></i> New job
+              </a>
+            </li>
+          </ul>
+
+          <!-- Push content down -->
+          <div class="mt-auto"></div>
+
+        </div> <!-- / .navbar-collapse -->
+
+      </div>
+    </nav>
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="topbar-profile bg-white d-flex align-items-end justify-content-between sticky-top" style="z-index: 2">
+
+        <!-- Header -->
+        <div class="d-flex align-items-center px-3 my-auto" style="position:relative;">
+          <div>
+            <!-- Avatar -->
+            <a href="#" class="avatar avatar-xl">
+              <img src="/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded">
+            </a>
+          </div>
+
+          <div class="ml-4">
+            <button type="button" class="btn btn-sm btn-link p-0 mb-2">
+              <a href="javascript:history.back()"><i class="fe fe-chevron-left"></i>Back to [previous]</a>
+            </button>
+            <!-- full_name -->
+            <h1 class="mb-1">
+              Alexandre Vallet
+              <span>
+                <button class="btn btn-white btn-xs text-muted ml-2" data-toggle="modal" data-target="#profile-edit">
+                  edit profile
+                </button>
+              </span>
+            </h1>
+
+            <!-- Headline -->
+            <p class="mb-1 text-muted">
+              
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Process -->
+        <div class="d-flex align-items-center" style="margin-bottom: 5px;">
+
+          <!-- Position selector -->
+          <div class="mr-2">
+              
+                <select class="custom-select custom-select-sm" data-toggle="select" data-placeholder="No job offer">
+                  <option></option>
+                  <option>Backend Engineer</option>
+                  <option>Frontend Developer</option>
+                  <option>Product Manager</option>
+                  <option>Marketing & Sales</option>
+                </select>
+              
+              
+              
+              
+              
+          </div>
+
+          <!-- Stage selector -->
+          <div class="mr-1">
+            
+              <select class="custom-select custom-select-sm" data-toggle="select" data-placeholder="No stage">
+                <option></option>
+                <option>Sourced</option>
+                <option>Applied</option>
+                <option>Contacted</option>
+                <option>Interview</option>
+                <option>Offer sent</option>
+                <option>Hired</option>
+                <option>Declined</option>
+              </select>
+            
+            
+                  
+            
+            
+            
+            
+          </div>
+
+          <!-- More actions dropdown -->
+          <div>
+            <div class="dropdown">
+              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#!" class="dropdown-item">Action</a>
+                <a href="#!" class="dropdown-item">Another action</a>
+                <a href="#!" class="dropdown-item">Something else here</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Talent profile -->
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- Resume -->
+          <div class="col-12 col-xl-5 p-0">
+            <div class="profile profile-resume">
+
+             <!-- Highlights -->
+             <div class="px-5 mt-4">
+                <div class='row'>
+                  <div class="col-12 col-md-4 p-0 input-group input-group-merge">
+                   <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Contract type" style="border:none" value="">
+                   <div class="input-group-prepend">
+                     <div class="input-group-text" style="border:none;padding: 3px;">
+                       <i class="fe fe-briefcase text-muted" style=";font-size:12px"></i>
+                     </div>
+                   </div>
+                  </div>
+                  <div class="col-12 col-md-4 p-0 input-group input-group-merge">
+                   <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Salary" style="border:none" value="">
+                   <div class="input-group-prepend">
+                     <div class="input-group-text" style="border:none;padding: 3px;">
+                       <i class="fe fe-dollar-sign text-muted" style=";font-size:12px"></i>
+                     </div>
+                   </div>
+                  </div>
+                  <div class="col-12 col-md-4 p-0 input-group input-group-merge">
+                   <input type="text" class="form-control form-control-prepended form-control-sm" placeholder="Availability to start" data-toggle="flatpickr" style="border:none" value="">
+                   <div class="input-group-prepend">
+                     <div class="input-group-text" style="border:none;padding: 3px;">
+                       <i class="fe fe-clock text-muted" style=";font-size:12px"></i>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+             </div>
+
+              <!-- Tags -->
+              <div class="d-flex flex-column align-items-start px-5 mt-2">
+                <div class="d-flex flex-wrap align-items-center">
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <span class="btn btn-sm btn-link p-0">
+                    <i class="fe fe-plus"></i>Add tag
+                  </span>
+                </div>
+              </div>
+
+              <!-- Summary -->
+              <div class="px-5 mt-4">
+                <h3 class="mb-3">Summary</h3>
+                <p></p>
+              </div>
+
+              <!-- Skills -->
+              <div class="px-5 mt-3">
+                
+                
+                
+                
+                
+                
+                
+                <button class="btn btn-sm btn-link mb-2 p-0">
+                  <span class="fe fe-plus"></span>Add skill
+                </button>
+              </div>
+
+              <!-- Experience -->
+              <div class="px-5 mt-5">
+                <h3 class="mb-2">Work experience<span class="small text-muted ml-2">
+                  
+                </h3>
+
+                <ul class="profile-resume-work-education pl-4 mt-4 mb-0">
+                  
+                  
+                  
+                </ul>
+
+                
+              </div>
+
+              <!-- Education -->
+              <div class="px-5 mt-5">
+                <h3 class="mb-2">Education</h3>
+
+                <ul class="profile-resume-work-education pl-4 mt-4 mb-0">
+                  
+                  
+                  
+                </ul>
+
+                
+              </div>
+
+              <!-- Social -->
+              <div class="px-5 mt-5">
+                <h3 class="mb-3">Social & Links</h3>
+                
+                  <a href="" target="_blank" class="small ml-2">
+                    <i class="text-primary mr-1 fab fa-"></i>
+                    
+                  </a>
+                
+                
+                  <a href="" target="_blank" class="small ml-2">
+                    <i class="text-primary mr-1 fab fa-"></i>
+                    
+                  </a>
+                
+                
+                  <a href="" target="_blank" class="small ml-2">
+                    <i class="text-primary mr-1 fab fa-"></i>
+                    
+                  </a>
+                
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Timelines -->
+          <div class="col-12 col-xl-7 p-0">
+            <div class="timeline-profile">
+              <div class="timeline-body">
+
+                <!-- Controls -->
+                <div class="timeline-controls d-flex justify-content-between">
+                  <div>
+                    <button class="btn btn-sm btn-white">
+                      <span class="fe fe-mail text-primary"></span> Email
+                    </button>
+
+                    <button class="btn btn-sm btn-white">
+                      <span class="fe fe-clock text-primary"></span> Reminder
+                    </button>
+
+                    <button class="btn btn-sm btn-white">
+                      <span class="fe fe-file-text text-primary"></span> Note
+                    </button>
+
+                    <button class="btn btn-sm btn-white">
+                      <span class="fe fe-more-horizontal"></span>
+                    </button>
+                  </div>
+                  <div>
+                    <select class="custom-select custom-select-sm" data-toggle="select">
+                      <option>All activities</option>
+                      <option>Emails</option>
+                      <option>Applications</option>
+                      <option>Interviews</option>
+                      <option>Notes</option>
+                      <option>Reviews</option>
+                      <option>Signals</option>
+                      <option>Reminders</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Scheduled items -->
+                
+                  
+
+                
+
+
+                
+
+                <!-- Timeline items -->
+                <div class="timeline-items">
+                  
+                    
+
+                  
+                  
+                    
+
+                  
+                  
+                    
+
+                  
+                  
+                    
+
+                  
+                  
+                    
+
+                  
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+    <script src="../assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="../assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="../assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="../assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="../assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../assets/libs/list.js/dist/list.min.js"></script>
+    <script src="../assets/libs/quill/dist/quill.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="../assets/libs/chart.js/Chart.extension.js"></script>
+    <script src="https://kit.fontawesome.com/5a839d3cf9.js" crossorigin="anonymous"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/dashkit.min.js"></script>
+
+
+  </body>
+</html>
+
