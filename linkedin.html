@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="To reach the moon, you’ll need the best crew." />
+    <link rel="icon" href="./favicon.ico"/>
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
+    <link rel="stylesheet" href="./assets/libs/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+
+    <!-- Map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    
+    <link rel="stylesheet" href="./assets/css/theme.min.css">
+      
+    <!-- Title -->
+    <title>Crew - Chrome extension</title>
+
+  </head>
+  <body>
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+      <div class='main-content chrome-extension'>
+
+        <!-- Trigger -->
+        <div class="chrome-extension-trigger">
+          <button type="button" class="btn btn-light btn-sm mr-4">
+            <a href="inbox/inbox_1.html"><i class="fe fe-chevron-left"></i> Back to Crew</a>
+          </button>
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#chromeExtensionLogin">
+          <!-- <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#chromeExtensionForm"> -->
+            Launch Chrome Extension
+          </button>
+        </div>
+
+        <!-- MODAL: Sign-in -->
+        <div class="modal fade fixed-right" id="chromeExtensionLogin" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-vertical" role="document">
+            <div class="modal-content chrome-extension-modal d-flex align-items-center justify-content-center">
+
+              <!-- Header -->
+              <div class="chrome-extension-header">
+                <button class="btn btn-sm btn-light" style="visibility: hidden;">
+                  <i class="fe fe-refresh-ccw"></i>
+                </button>
+                <a class="navbar-brand" href="sign-in.html">
+                  <img src="assets/img/logo-dark.svg" class="navbar-brand-img
+                  mx-auto" style="width:100px">
+                </a>
+                <button class="btn btn-sm btn-light" data-dismiss="modal">
+                  <i class="fe fe-x"></i>
+                </button>
+              </div>
+
+              <!-- Heading -->
+              <h2 class="display-4 text-center mb-2">
+                Welcome back!
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted text-center mb-5">
+                Please fasten your seatbelt, <br> we're about to skyrocket.
+              </p>
+
+              <!-- Form -->
+              <form class="sign-in-form">
+
+                <!-- Google -->
+                <div class="sign-in-button text-center">
+                  <button class="btn btn-lg btn-block btn-white mb-3 rounded" data-toggle="modal" data-target="#chromeExtensionForm" data-dismiss="modal">
+                    <a href="#" class="text-dark">
+                      <img src="assets/img/avatars/teams/team-logo-9.png">
+                      Sign in with Google
+                    </a>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL: Form default -->
+        <div class="modal fade fixed-right" id="chromeExtensionForm" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-vertical" role="document">
+            <div class="modal-content chrome-extension-modal d-flex align-items-center justify-content-start">
+
+              <!-- Header -->
+              <div class="chrome-extension-header">
+                <button class="btn btn-sm btn-light">
+                  <i class="fe fe-refresh-ccw"></i>
+                </button>
+                <a class="navbar-brand" href="sign-in.html">
+                  <img src="assets/img/logo-dark.svg" class="navbar-brand-img
+                  mx-auto" style="width:100px">
+                </a>
+                <button class="btn btn-sm btn-light" data-dismiss="modal">
+                  <i class="fe fe-x"></i>
+                </button>
+              </div>
+
+              <!-- Content -->
+              <form class="container chrome-extension-body" style="position:relative;">
+
+
+
+                <!-- Talent details -->
+                <div class="form-row flex-column align-items-center">
+                  <div>
+                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHnZDga_Ohcrw/profile-displayphoto-shrink_400_400/0?e=1607558400&v=beta&t=yf8rkGWnWoUCBFac2hX87mUBHqTYgbB0Yvew5Hw6-t0" class="avatar avatar-img avatar-sm rounded-circle">
+                  </div>
+                  <h2 class="mt-2 mb-1">Thibaud Elzière</h2>
+                  <p class="text-muted mb-2">Folk + eFounders</p>
+                  <!-- Edit profile -->
+                  <a href="#" class="btn btn-sm btn-light" data-toggle="collapse" data-target="#chromeExtensionFormEdit" style="position:absolute; right:20px;top:10px;">
+                    Edit info
+                  </a href="#">
+                </div>
+
+                <!-- Edit form -->
+                <div class='chrome-extension-form'>
+
+                  <div class="collapse" id="chromeExtensionFormEdit">
+                    <div class="form-row mb-3 mx-0">
+                      <div class="col-12 col-md-6">
+                        <label class="small">First name</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="First name" value="Thibaud">
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="small">Last name</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="Last name" value="Elzière">
+                      </div>
+                    </div>
+
+                    <div class="form-row mb-3 mx-0">
+                      <div class="col-12">
+                        <label class="small">Headline</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="First name" value="Folk + eFounders">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row mb-3 mx-0">
+                    <div class="col-12 col-md-6">
+                      <label class="small">Email</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="Add email here" value="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="small">Phone number</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="Add phone number" value="">
+                    </div>
+                  </div>
+
+                  <!-- Push content down -->
+                  <div class="mt-auto"></div>
+
+                  <div class="form-row mb-3 mx-0">
+                    <div class="col-12 col-md-6">
+                      <label class="small">Job offer</label>
+                      <select class="custom-select custom-select-sm" data-toggle="select">
+                        <option>Backend Engineer</option>
+                        <option>Frontend Developer</option>
+                        <option>Product Manager</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="small">Sourced via</label>
+                      <select class="custom-select custom-select-sm" data-toggle="select">
+                        <option>Linkedin</option>
+                        <option>Twitter</option>
+                        <option>Referral</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row mb-3 mx-0">
+                    <div class="col-12">
+                      <label class="small">Tags</label>
+                      <select class="form-control" data-toggle="select" multiple>
+                        <option>CSS</option>
+                        <option>HTML</option>
+                        <option>JavaScript</option>
+                        <option>Bootstrap</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row mb-3 mx-0">
+                    <div class="col-12">
+                      <label class="small">Notes</label>
+                      <textarea type="text" class="form-control form-control-sm" placeholder="Add details" style="height: 80px;"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+
+              </form>
+
+              <!-- Footer -->
+              <div class="chrome-extension-footer">
+                <div class="col-12">
+                  <button class="btn btn btn-primary" data-toggle="modal" data-dismiss="modal">
+                    Add talent to Crew
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+    <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="./assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="./assets/libs/list.js/dist/list.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="./assets/libs/chart.js/Chart.extension.js"></script>
+    <script src="https://kit.fontawesome.com/5a839d3cf9.js" crossorigin="anonymous"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+    <script src="./assets/js/dashkit.min.js"></script>
+
+
+  </body>
+</html>
+
+
